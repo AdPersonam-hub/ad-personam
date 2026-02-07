@@ -5,15 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ad Personam Cultural Events Ltd</title>
   <meta name="description" content="Ad Personam Cultural Events Ltd produces theatre, music and interdisciplinary cultural events rooted in community and collaboration." />
+
   <style>
     :root{
-  --bg:#ffffff;
-  --card:#ffffff;
-  --text:#111111;
-  --muted:#5a5a5a;
-  --line:#e7e5df;
-  --shadow: 0 10px 26px rgba(0,0,0,.08);
-}
+      --bg:#faf9f7;
+      --card:#ffffff;
+      --text:#111111;
+      --muted:#5a5a5a;
+      --muted2:#3f3f3f;
+      --line:#e7e5df;
+      --shadow: 0 10px 26px rgba(0,0,0,.08);
+    }
 
     *{box-sizing:border-box}
     html,body{margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);}
@@ -21,10 +23,9 @@
     .wrap{max-width:1080px;margin:0 auto;padding:0 18px}
 
     /* Header */
-    header{position:sticky;top:0;z-index:30;background:rgba(246,245,242,.95);border-bottom:1px solid var(--line);}
+    header{position:sticky;top:0;z-index:30;background:rgba(250,249,247,.92);backdrop-filter: blur(10px);border-bottom:1px solid var(--line);}
     .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
     .brand{display:flex;align-items:center;gap:12px;min-width:220px}
-    .mark{width:38px;height:38px;border-radius:10px;background:#000;box-shadow:none}
     .brand h1{font-size:14px;line-height:1.2;margin:0;font-weight:750;letter-spacing:.2px}
     .brand p{margin:0;font-size:12px;color:var(--muted)}
 
@@ -33,55 +34,32 @@
     nav a:hover{color:var(--text);border-color:var(--line);background:#ffffff}
 
     /* Hero */
-.hero-image{
-  width:100%;
-  height:320px;
-  border-radius:18px;
-  overflow:hidden;
-  border:1px solid var(--line);
-  margin-bottom:24px;
-}
-
-.hero-image img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
-
     .hero{padding:56px 0 22px}
-
-
     .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:24px;align-items:stretch}
     .hero h2{font-size:38px;line-height:1.05;margin:0 0 12px;font-weight:850;letter-spacing:-.6px}
     .hero p{margin:0 0 18px;color:var(--muted);font-size:16px;line-height:1.6;max-width:60ch}
+
     .pillrow{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 0}
-    .pill{font-size:12px;color:#222;border:1px solid var(--line);background:#ffffff;padding:8px 10px;border-radius:999px}
+    .pill{font-size:12px;color:var(--text);border:1px solid var(--line);background:#ffffff;padding:8px 10px;border-radius:999px}
+
     .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:11px 14px;border-radius:12px;border:1px solid rgba(42,49,72,.9);background:rgba(18,22,36,.75);color:var(--text);font-weight:650;font-size:13px}
-    .btn:hover{border-color:rgba(124,196,255,.55);box-shadow:0 14px 36px rgba(124,196,255,.12)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:11px 14px;border-radius:12px;border:1px solid var(--line);background:#ffffff;color:var(--text);font-weight:650;font-size:13px}
+    .btn:hover{border-color:#000;box-shadow:0 14px 30px rgba(0,0,0,.10)}
     .btn.primary{background:#000;color:#fff;border-color:#000}
 
     .card{background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow)}
     .hero-card{padding:18px}
+
     .kpi{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:12px}
-    .kpi .mini{padding:12px;border-radius:14px;background:rgba(11,13,18,.55);border:1px solid rgba(42,49,72,.6)}
+    .kpi .mini{padding:12px;border-radius:14px;background:#f6f5f2;border:1px solid var(--line)}
     .kpi .num{font-size:18px;font-weight:850}
     .kpi .lbl{font-size:12px;color:var(--muted);margin-top:3px}
-/* Gallery */
-.gallery{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:14px;
-}
 
-.gallery img{
-  width:100%;
-  height:220px;
-  object-fit:cover;
-  border-radius:16px;
-  border:1px solid var(--line);
-  box-shadow:var(--shadow);
-}
+    .meta{color:var(--muted2);font-size:12px;margin-top:6px}
+
+    .hero-image{margin-top:18px}
+    .hero-image img{width:100%;height:320px;object-fit:cover;border-radius:18px;border:1px solid var(--line);box-shadow:var(--shadow);display:block}
+
     /* Sections */
     section{padding:34px 0}
     .section-title{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:14px}
@@ -92,7 +70,7 @@
     .grid.two{grid-template-columns:repeat(2,1fr)}
     .grid.three{grid-template-columns:repeat(3,1fr)}
 
-    .tile{padding:16px;border-radius:18px;background:var(--card);border:1px solid var(--line)}
+    .tile{padding:16px;border-radius:18px;background:var(--card);border:1px solid var(--line);box-shadow:0 1px 0 rgba(0,0,0,.02)}
     .tile h4{margin:0 0 8px;font-size:14px;font-weight:800}
     .tile p{margin:0;color:var(--muted);font-size:13px;line-height:1.55}
 
@@ -100,26 +78,17 @@
     .list li{display:flex;gap:10px;align-items:flex-start;color:var(--muted);font-size:13px;line-height:1.45}
     .dot{width:9px;height:9px;border-radius:50%;background:#000;margin-top:6px;flex:0 0 9px}
 
+    /* Gallery */
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .gallery img{width:100%;height:220px;object-fit:cover;border-radius:16px;border:1px solid var(--line);box-shadow:var(--shadow);display:block}
+
     /* Work */
-.work{display:grid;grid-template-columns:1fr;gap:14px}
-.work-item{
-  padding:16px;
-  border-radius:18px;
-  border:1px solid var(--line);
-  background:#ffffff;
-}
-.work-top{display:flex;align-items:flex-start;justify-content:space-between;gap:16px}
-.work-item h4{margin:0;font-size:14px;font-weight:850}
-.meta{color:#3f3f3f;font-size:12px;margin-top:6px}
-.tagrow{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
-.tag{
-  font-size:11px;
-  color:#1a1a1a;
-  border:1px solid var(--line);
-  padding:6px 8px;
-  border-radius:999px;
-  background:#f6f5f2;
-}
+    .work{display:grid;grid-template-columns:1fr;gap:14px}
+    .work-item{padding:16px;border-radius:18px;border:1px solid var(--line);background:#ffffff;box-shadow:0 1px 0 rgba(0,0,0,.02)}
+    .work-top{display:flex;align-items:flex-start;justify-content:space-between;gap:16px}
+    .work-item h4{margin:0;font-size:14px;font-weight:850}
+    .tagrow{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+    .tag{font-size:11px;color:#222;border:1px solid var(--line);padding:6px 8px;border-radius:999px;background:#f6f5f2}
 
     /* Contact */
     .contact{display:grid;grid-template-columns:1.1fr .9fr;gap:14px}
@@ -140,11 +109,14 @@
       .contact{grid-template-columns:1fr}
       .brand{min-width:auto}
       .hero h2{font-size:32px}
+      .hero-image img{height:260px}
+      .gallery{grid-template-columns:repeat(2,1fr)}
+      .gallery img{height:180px}
     }
   </style>
 </head>
-<body>
 
+<body>
 
 <header>
   <div class="wrap">
@@ -159,6 +131,7 @@
       <nav aria-label="Primary">
         <ul>
           <li><a href="#about">About</a></li>
+          <li><a href="#gallery">Images</a></li>
           <li><a href="#work">Work</a></li>
           <li><a href="#services">What we do</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -170,11 +143,10 @@
 
 <main id="top">
   <div class="wrap">
-    <section class="hero">
-      <div class="hero-image">
-  <img src="hero.jpg" alt="Ad Personam Cultural Events production image">
-</div>
 
+    <section class="hero">
+
+      <!-- Text first -->
       <div class="hero-grid">
         <div>
           <h2>Thoughtfully made theatre, music and cultural events — rooted in place, led by artists, and built with care.</h2>
@@ -229,17 +201,13 @@
           </ul>
         </div>
       </div>
+
+      <!-- Image after the hero content -->
+      <div class="hero-image">
+        <img src="hero.jpg" alt="Ad Personam Cultural Events production image">
+      </div>
+
     </section>
-
-
-@media (max-width: 860px){
-  .gallery{
-    grid-template-columns:repeat(2,1fr);
-  }
-  .gallery img{
-    height:180px;
-  }
-}
 
     <section id="about">
       <div class="section-title">
@@ -272,22 +240,23 @@
         </div>
       </div>
     </section>
-<section id="gallery">
-  <div class="section-title">
-    <h3>Images</h3>
-    <p>A glimpse of recent productions, events and collaborations.</p>
-  </div>
 
-  <div class="gallery">
-    <img src="gallery-1.jpg" alt="Ad Personam production image">
-    <img src="gallery-2.jpg" alt="Ad Personam community event">
-    <img src="gallery-3.jpg" alt="Theatre rehearsal image">
-    <img src="gallery-4.jpg" alt="Festival performance">
-    <img src="gallery-5.jpg" alt="Music and youth project">
-    <img src="gallery-6.jpg" alt="Live performance image">
-    <img src="gallery-7.jpg" alt="Live performance image 2">
-  </div>
-</section>
+    <section id="gallery">
+      <div class="section-title">
+        <h3>Images</h3>
+        <p>A glimpse of recent productions, events and collaborations.</p>
+      </div>
+
+      <div class="gallery">
+        <img src="gallery-1.jpg" alt="Ad Personam production image">
+        <img src="gallery-2.jpg" alt="Ad Personam community event">
+        <img src="gallery-3.jpg" alt="Theatre rehearsal image">
+        <img src="gallery-4.jpg" alt="Festival performance">
+        <img src="gallery-5.jpg" alt="Music and youth project">
+        <img src="gallery-6.jpg" alt="Live performance image">
+        <img src="gallery-7.jpg" alt="Live performance image 2">
+      </div>
+    </section>
 
     <section id="work">
       <div class="section-title">
@@ -298,37 +267,21 @@
       <div class="work">
 
         <div class="work-item"><div class="work-top"><div><h4>Castle-Lake Arts Festival <span class="meta">(2021)</span></h4><div class="meta">Festival production</div></div></div></div>
-
         <div class="work-item"><div class="work-top"><div><h4>A Midsummer Night’s Dream <span class="meta">(2021)</span></h4><div class="meta">Theatre production</div></div></div></div>
-
         <div class="work-item"><div class="work-top"><div><h4>Murrintown Christmas Festival <span class="meta">(2021–2022)</span></h4><div class="meta">Seasonal festival</div></div></div></div>
-
         <div class="work-item"><div class="work-top"><div><h4>By Billy Roche <span class="meta">(2022)</span></h4><div class="meta">Theatre production</div></div></div></div>
-
         <div class="work-item"><div class="work-top"><div><h4>BarnFest at St Mary’s GAA <span class="meta">(2022)</span></h4><div class="meta">Community festival event</div></div></div></div>
-
         <div class="work-item"><div class="work-top"><div><h4>Christmas by Candlelight <span class="meta">(Ongoing)</span></h4><div class="meta">Seasonal performance series</div></div></div></div>
-
         <div class="work-item"><div class="work-top"><div><h4>Sequah <span class="meta">(2023)</span></h4><div class="meta">Short film by Billy Roche</div></div></div></div>
-
         <div class="work-item"><div class="work-top"><div><h4>Bealtaine Festival, Wexford <span class="meta">(2023–2024)</span></h4><div class="meta">Festival programming</div></div></div></div>
-
         <div class="work-item"><div class="work-top"><div><h4>Murrintown Christmas Special <span class="meta">(2023)</span></h4><div class="meta">Seasonal special event</div></div></div></div>
-
         <div class="work-item"><div class="work-top"><div><h4>The Rosslare Song Project <span class="meta">(2023)</span></h4><div class="meta">Cruinniú an nÓg Wexford</div></div></div></div>
-
         <div class="work-item"><div class="work-top"><div><h4>Everyone <span class="meta">(2024)</span></h4><div class="meta">Music Generation Wexford Park event</div></div></div></div>
-
         <div class="work-item"><div class="work-top"><div><h4>Filling the Well <span class="meta">(2024)</span></h4><div class="meta">Rosslare Strand Culture Night</div></div></div></div>
-
         <div class="work-item"><div class="work-top"><div><h4>La/Oíche <span class="meta">(2024)</span></h4><div class="meta">Ceilúradh, Fleadh Cheoil na hÉireann (Music Generation)</div></div></div></div>
-
         <div class="work-item"><div class="work-top"><div><h4>Music Generation Educators Day – We Are Music Generation <span class="meta">(2025)</span></h4><div class="meta">Music Generation national event</div></div></div></div>
-
         <div class="work-item"><div class="work-top"><div><h4>Bí Ann <span class="meta">(2025)</span></h4><div class="meta">Music Generation, Fleadh Cheoil na hÉireann</div></div></div></div>
-
         <div class="work-item"><div class="work-top"><div><h4>Filling the Well <span class="meta">(2025)</span></h4><div class="meta">Rosslare Strand Culture Night</div></div></div></div>
-
         <div class="work-item"><div class="work-top"><div><h4>Murrintown Christmas Special <span class="meta">(2025)</span></h4><div class="meta">Seasonal special event</div></div></div></div>
 
       </div>
@@ -414,7 +367,7 @@
             <li><span class="dot"></span><span><strong>Social:</strong> <span class="meta">Add links (Instagram / Facebook)</span></span></li>
           </ul>
 
-          <div class="tile" style="margin-top:12px;background:rgba(11,13,18,.55)">
+          <div class="tile" style="margin-top:12px;background:#f6f5f2">
             <h4 style="margin-bottom:6px">Downloadables</h4>
             <p class="meta" style="margin:0">Add links here for a PDF company pack, tech spec, and press photos.</p>
           </div>
@@ -444,9 +397,13 @@
     const to = 'menapiatheatre@gmail.com';
     const subject = encodeURIComponent('Ad Personam enquiry from ' + name);
     const body = encodeURIComponent(
-      'Name: ' + name + '\n' +
-      'Email: ' + email + '\n\n' +
-      msg + '\n'
+      'Name: ' + name + '
+' +
+      'Email: ' + email + '
+
+' +
+      msg + '
+'
     );
 
     window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
@@ -456,7 +413,3 @@
 
 </body>
 </html>
-
-
-
-
