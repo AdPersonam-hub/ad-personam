@@ -219,6 +219,30 @@
         </div>
       </div>
     </section>
+/* Gallery */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+}
+
+.gallery img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  border-radius:16px;
+  border:1px solid var(--line);
+  box-shadow:var(--shadow);
+}
+
+@media (max-width: 860px){
+  .gallery{
+    grid-template-columns:repeat(2,1fr);
+  }
+  .gallery img{
+    height:180px;
+  }
+}
 
     <section id="about">
       <div class="section-title">
@@ -251,6 +275,21 @@
         </div>
       </div>
     </section>
+<section id="gallery">
+  <div class="section-title">
+    <h3>Images</h3>
+    <p>A glimpse of recent productions, events and collaborations.</p>
+  </div>
+
+  <div class="gallery">
+    <img src="gallery-1.jpg" alt="Ad Personam production image">
+    <img src="gallery-2.jpg" alt="Ad Personam community event">
+    <img src="gallery-3.jpg" alt="Theatre rehearsal image">
+    <img src="gallery-4.jpg" alt="Festival performance">
+    <img src="gallery-5.jpg" alt="Music and youth project">
+    <img src="gallery-6.jpg" alt="Live performance image">
+  </div>
+</section>
 
     <section id="work">
       <div class="section-title">
@@ -419,4 +458,5 @@
 
 </body>
 </html>
+
 
