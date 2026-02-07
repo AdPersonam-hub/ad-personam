@@ -126,7 +126,35 @@
       .gallery{grid-template-columns:repeat(2,1fr)}
       .gallery img{height:180px}
     }
-  </style>
+  /* Lightbox (no JS) */
+.lightbox{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.85);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:100;
+}
+.lightbox img{
+  max-width:90vw;
+  max-height:90vh;
+  border-radius:12px;
+  background:#fff;
+}
+.lightbox:target{
+  display:flex;
+}
+.lightbox::after{
+  content:"×";
+  position:absolute;
+  top:20px;
+  right:30px;
+  font-size:40px;
+  color:#fff;
+}
+
+</style>
 </head>
 
 <body>
@@ -261,17 +289,27 @@
       </div>
 
       <div class="gallery">
-        <img src="gallery-1.jpg" alt="Ad Personam production image">
-        <img src="gallery-2.jpg" alt="Ad Personam community event">
-        <img src="gallery-3.jpg" alt="Theatre rehearsal image">
-        <img src="gallery-4.jpg" alt="Festival performance">
-        <img src="gallery-5.jpg" alt="Music and youth project">
-        <img src="gallery-6.jpg" alt="Live performance image">
-        <img src="gallery-7.jpg" alt="Live performance image 2">
+    <!-- Click any image to view larger -->
+        <a href="#img1"><img src="gallery-1.jpg" alt="Ad Personam production image"></a>
+    <a href="#img2"><img src="gallery-2.jpg" alt="Ad Personam community event"></a>
+    <a href="#img3"><img src="gallery-3.jpg" alt="Theatre rehearsal image"></a>
+    <a href="#img4"><img src="gallery-4.jpg" alt="Festival performance"></a>
+    <a href="#img5"><img src="gallery-5.jpg" alt="Music and youth project"></a>
+    <a href="#img6"><img src="gallery-6.jpg" alt="Live performance image"></a>
+    <a href="#img7"><img src="gallery-7.jpg" alt="Live performance image 2"></a>
       </div>
     </section>
 
-    <section id="work">
+<!-- Lightbox targets -->
+<div id="img1" class="lightbox"><a href="#gallery"><img src="gallery-1.jpg"></a></div>
+<div id="img2" class="lightbox"><a href="#gallery"><img src="gallery-2.jpg"></a></div>
+<div id="img3" class="lightbox"><a href="#gallery"><img src="gallery-3.jpg"></a></div>
+<div id="img4" class="lightbox"><a href="#gallery"><img src="gallery-4.jpg"></a></div>
+<div id="img5" class="lightbox"><a href="#gallery"><img src="gallery-5.jpg"></a></div>
+<div id="img6" class="lightbox"><a href="#gallery"><img src="gallery-6.jpg"></a></div>
+<div id="img7" class="lightbox"><a href="#gallery"><img src="gallery-7.jpg"></a></div>
+
+<section id="work">
       <div class="section-title">
         <h3>Recent work</h3>
         <p>A selection of theatre, film, festival and music projects delivered by Ad Personam Cultural Events Ltd.</p>
