@@ -102,9 +102,19 @@
 
     footer{padding:28px 0 40px;color:var(--muted);font-size:12px;border-top:1px solid var(--line)}
 
-    /* Responsive */$1.gallery img{height:160px}
-    }
-  
+   
+  /* Responsive */
+@media (max-width: 860px){
+  .hero-grid{grid-template-columns:1fr}
+  .grid.two{grid-template-columns:1fr}
+  .grid.three{grid-template-columns:1fr}
+  .contact{grid-template-columns:1fr}
+  .brand{min-width:auto}
+  .hero h2{font-size:32px}
+  .gallery{grid-template-columns:repeat(2,1fr)}
+  .gallery img{height:160px}
+}
+
     /* Lightbox (no JS) */
     .lightbox{position:fixed;inset:0;background:rgba(0,0,0,.85);display:none;align-items:center;justify-content:center;z-index:100}
     .lightbox img{max-width:92vw;max-height:92vh;border-radius:12px;background:#fff}
@@ -406,4 +416,5 @@
 
 </body>
 </html>
+
 
