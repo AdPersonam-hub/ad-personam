@@ -529,141 +529,134 @@
       background:var(--gold-dark);
       border-color:var(--gold-dark);
     }
-/* Meet the Founders */
 
-/* Meet the Founders */
 
-.people-grid{
-  display:grid;
-  grid-template-columns:1fr;
-  gap:18px;
-  max-width:900px;
-  margin:0 auto;
-}
+    /* Meet the Founders */
 
-.person-card{
-  display:grid;
-  grid-template-columns:180px minmax(0,1fr);
-  gap:22px;
-  align-items:start;
+    .people-grid{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:18px;
+      max-width:900px;
+      margin:0 auto;
+    }
 
-  width:100%;
-  height:auto;
-  padding:18px;
+    .person-card{
+      display:grid;
+      grid-template-columns:180px minmax(0,1fr);
+      gap:22px;
+      align-items:start;
+      width:100%;
+      height:auto;
+      padding:18px;
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:18px;
+      box-shadow:0 1px 0 rgba(0,0,0,.02);
+    }
 
-  background:var(--card);
-  border:1px solid var(--line);
-  border-radius:18px;
-  box-shadow:0 1px 0 rgba(0,0,0,.02);
-}
+    .person-image{
+      width:180px;
+    }
 
-.person-image{
-  width:180px;
-}
+    .person-image img{
+      display:block;
+      width:180px;
+      height:230px;
+      object-fit:cover;
+      object-position:center top;
+      border:1px solid var(--line);
+      border-radius:14px;
+    }
 
-.person-image img{
-  display:block;
-  width:180px;
-  height:230px;
-  object-fit:cover;
-  object-position:center top;
+    .person-content{
+      min-width:0;
+      padding:4px 0;
+    }
 
-  border:1px solid var(--line);
-  border-radius:14px;
-}
+    .person-content h4{
+      margin:0 0 4px;
+      font-size:18px;
+      font-weight:850;
+    }
 
-.person-content{
-  min-width:0;
-  padding:4px 0;
-}
+    .person-role{
+      margin:0 0 12px;
+      color:var(--gold-dark);
+      font-size:13px;
+      font-weight:700;
+    }
 
-.person-content h4{
-  margin:0 0 4px;
-  font-size:18px;
-  font-weight:850;
-}
+    .person-content p{
+      max-width:65ch;
+      margin:0;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.6;
+    }
 
-.person-role{
-  margin:0 0 12px;
-  color:var(--gold-dark);
-  font-size:13px;
-  font-weight:700;
-}
+    .person-links{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:16px;
+    }
 
-.person-content p{
-  max-width:65ch;
-  margin:0;
-  color:var(--muted);
-  font-size:13px;
-  line-height:1.6;
-}
+    .person-links a{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:10px 12px;
+      background:#000;
+      color:#fff;
+      border:1px solid #000;
+      border-radius:12px;
+      font-size:13px;
+      font-weight:650;
+    }
 
-.person-links{
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px;
-  margin-top:16px;
-}
+    .person-links a:hover,
+    .person-links a:focus-visible{
+      background:var(--gold-dark);
+      border-color:var(--gold-dark);
+    }
 
-.person-links a{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
+    @media (max-width:640px){
+      .people-grid{
+        max-width:none;
+      }
 
-  padding:10px 12px;
+      .person-card{
+        grid-template-columns:120px minmax(0,1fr);
+        gap:14px;
+        padding:14px;
+      }
 
-  background:#000;
-  color:#fff;
-  border:1px solid #000;
-  border-radius:12px;
+      .person-image{
+        width:120px;
+      }
 
-  font-size:13px;
-  font-weight:650;
-}
+      .person-image img{
+        width:120px;
+        height:160px;
+      }
+    }
 
-.person-links a:hover,
-.person-links a:focus-visible{
-  background:var(--gold-dark);
-  border-color:var(--gold-dark);
-}
+    @media (max-width:480px){
+      .person-card{
+        grid-template-columns:1fr;
+      }
 
-@media (max-width:640px){
+      .person-image{
+        width:100%;
+      }
 
-  .people-grid{
-    max-width:none;
-  }
+      .person-image img{
+        width:100%;
+        height:320px;
+      }
+    }
 
-  .person-card{
-    grid-template-columns:120px minmax(0,1fr);
-    gap:14px;
-    padding:14px;
-  }
-
-  .person-image{
-    width:120px;
-  }
-
-  .person-image img{
-    width:120px;
-    height:160px;
-  }
-}
-
-@media (max-width:480px){
-
-  .person-card{
-    grid-template-columns:1fr;
-  }
-
-  .person-image{
-    width:100%;
-  }
-
-  .person-image img{
-    width:100%;
-    height:320px;
-  }
-}
     /* Gallery */
 
     .gallery{
@@ -857,13 +850,13 @@
 
         <nav aria-label="Primary">
           <ul>
-  <li><a href="#projects">Current Projects</a></li>
-  <li><a href="#past-productions">Past Productions</a></li>
-  <li><a href="#meet-the-founders">Meet the Founders</a></li>
-  <li><a href="#project-list">Full Project List</a></li>
-  <li><a href="#services">What We Do</a></li>
-  <li><a href="#contact">Contact</a></li>
-</ul>
+            <li><a href="#projects">Current Projects</a></li>
+            <li><a href="#past-productions">Past Productions</a></li>
+            <li><a href="#meet-the-founders">Meet the Founders</a></li>
+            <li><a href="#project-list">Full Project List</a></li>
+            <li><a href="#services">What We Do</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
         </nav>
 
       </div>
@@ -982,9 +975,12 @@
             <h4>Our approach</h4>
 
             <p>
-              <p>
-Ad Personam Cultural Events Ltd creates theatre, music and cultural events that combine artistic excellence with genuine community connection. We work with outstanding artists and partners to produce ambitious, accessible experiences—from intimate productions and concerts to large-scale festivals and public events. Rooted in Wexford and reaching beyond, our work is driven by a belief that great art should inspire, connect and leave a lasting impression.
-</p>
+              Ad Personam Cultural Events Ltd creates theatre, music and cultural events
+              that combine artistic excellence with genuine community connection. We work
+              with outstanding artists and partners to produce ambitious, accessible
+              experiences — from intimate productions and concerts to large-scale festivals
+              and public events. Rooted in Wexford and reaching beyond, our work is driven by
+              a belief that great art should inspire, connect and leave a lasting impression.
             </p>
 
             <ul class="list">
@@ -1022,6 +1018,92 @@ Ad Personam Cultural Events Ltd creates theatre, music and cultural events that 
               <a class="btn" href="#contact">Request a company pack</a>
             </div>
           </div>
+
+        </div>
+      </section>
+
+
+      <section id="meet-the-founders">
+        <div class="section-title">
+          <h3>Meet the Founders</h3>
+          <p>
+            Ad Personam Cultural Events Ltd was founded by two experienced artists whose
+            combined careers span directing, producing, acting, music, education and
+            cultural event production.
+          </p>
+        </div>
+
+        <div class="people-grid">
+
+          <article class="person-card">
+            <div class="person-image">
+              <img
+                src="peter-mccamley.jpg"
+                alt="Peter McCamley, co-founder of Ad Personam Cultural Events Ltd"
+              />
+            </div>
+
+            <div class="person-content">
+              <h4>Peter McCamley</h4>
+
+              <p class="person-role">
+                Co-Founder • Director • Producer • Actor • Educator
+              </p>
+
+              <p>
+                Peter is a theatre director, producer, actor and educator with more than
+                twenty years of professional experience across theatre, opera, film and
+                performance training. He has directed professional productions throughout
+                Ireland and the UK, teaches acting and voice, and is committed to creating
+                artist-led work rooted in community and place.
+              </p>
+
+              <div class="person-links">
+                <a
+                  href="https://adpersonam-hub.github.io/peter-mccamley-portfolio/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Visit Peter's Website
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="person-card">
+            <div class="person-image">
+              <img
+                src="aileen-donohoe.jpg"
+                alt="Aileen Donohoe, co-founder of Ad Personam Cultural Events Ltd"
+              />
+            </div>
+
+            <div class="person-content">
+              <h4>Aileen Donohoe</h4>
+
+              <p class="person-role">
+                Co-Founder • Producer • Performer • Musician • Vocal Coach
+              </p>
+
+              <p>
+                Aileen is a performer, producer, singing teacher and musician with extensive
+                experience creating theatre, music and community arts projects throughout
+                Ireland. She specialises in vocal performance, music education and artistic
+                producing, bringing warmth, creativity and organisational expertise to every
+                Ad Personam production.
+              </p>
+
+              <div class="person-links">
+                <a
+                  href="https://aileendonohoe.com/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Visit Aileen's Website
+                </a>
+              </div>
+            </div>
+          </article>
 
         </div>
       </section>
@@ -1074,198 +1156,98 @@ Ad Personam Cultural Events Ltd creates theatre, music and cultural events that 
       </section>
 
       <section id="past-productions">
-  <div class="section-title">
-    <h3>Past Productions</h3>
-    <p>
-      A selection of theatre, film, music and community projects produced by Ad Personam.
-    </p>
-  </div>
-
-  <div class="projects">
-
-    <article class="project">
-      <div class="project-media">
-        <img
-          src="of-mornington.jpg"
-          alt="Of Mornington by Billy Roche"
-        />
-      </div>
-
-      <div class="project-body">
-        <h4 class="project-title">
-          Of Mornington <span class="meta">(2026)</span>
-        </h4>
-
-        <p class="project-sub">
-          Billy Roche’s raw, quietly devastating drama, produced at Wexford Arts Centre
-          and Smock Alley Theatre, Dublin.
-        </p>
-      </div>
-    </article>
-
-    <article class="project">
-      <div class="project-media">
-        <img
-          src="filling-the-well.jpg"
-          alt="Filling the Well at Rosslare Strand"
-        />
-      </div>
-
-      <div class="project-body">
-        <h4 class="project-title">
-          Filling the Well <span class="meta">(2024–2025)</span>
-        </h4>
-
-        <p class="project-sub">
-          A community-led Culture Night event in Rosslare Strand, bringing together
-          music, performance and local stories.
-        </p>
-      </div>
-    </article>
-
-    <article class="project">
-      <div class="project-media">
-        <img
-          src="sequah.jpg"
-          alt="Sequah, a short film by Billy Roche"
-        />
-      </div>
-
-      <div class="project-body">
-        <h4 class="project-title">
-          Sequah <span class="meta">(2023)</span>
-        </h4>
-
-        <p class="project-sub">
-          A short film by Billy Roche, created through a collaboration of
-          Wexford-based artists and performers.
-        </p>
-      </div>
-    </article>
-
-    <article class="project">
-      <div class="project-media">
-        <img
-          src="castle-lake.jpg"
-          alt="Castle-Lake Arts Festival, Johnstown Castle"
-        />
-      </div>
-
-      <div class="project-body">
-        <h4 class="project-title">
-          Castle-lake Arts Festival <span class="meta">(2021)</span>
-        </h4>
-
-        <p class="project-sub">
-          An atmospheric summer performance series featuring live music,
-          theatre and storytelling.
-        </p>
-      </div>
-    </article>
-<section id="meet-the-founders">
-
-  <div class="section-title">
-    <h3>Meet the Founders</h3>
-
-    <p>
-      Ad Personam Cultural Events Ltd was founded by two experienced artists
-      whose combined careers span directing, producing, acting, music,
-      education and cultural event production.
-    </p>
-  </div>
-
-  <div class="people-grid">
-
-    <article class="person-card">
-
-      <div class="person-image">
-        <img
-          src="peter-mccamley.jpg"
-          alt="Peter McCamley, co-founder of Ad Personam Cultural Events Ltd"
-        />
-      </div>
-
-      <div class="person-content">
-
-        <h4>Peter McCamley</h4>
-
-        <p class="person-role">
-          Co-Founder • Director • Producer • Actor • Educator
-        </p>
-
-        <p>
-          Peter is a theatre director, producer, actor and educator with more
-          than twenty years of professional experience across theatre, opera,
-          film and performance training. He has directed professional
-          productions throughout Ireland and the UK, teaches acting and voice,
-          and is committed to creating artist-led work rooted in community
-          and place.
-        </p>
-
-        <div class="person-links">
-
-          <a
-            class="primary"
-            href="https://adpersonam-hub.github.io/peter-mccamley-portfolio/"
-            target="_blank"
-            rel="noopener"
-          >
-            Visit Peter's Website
-          </a>
-
+        <div class="section-title">
+          <h3>Past Productions</h3>
+          <p>
+            A selection of theatre, film, music and community projects produced by Ad Personam.
+          </p>
         </div>
 
-      </div>
+        <div class="projects">
 
-    </article>
+          <article class="project">
+            <div class="project-media contain">
+              <img
+                src="project-1.jpg"
+                alt="Of Mornington production image"
+              />
+            </div>
 
-    <article class="person-card">
+            <div class="project-body">
+              <h4 class="project-title">
+                Of Mornington <span class="meta">(2026)</span>
+              </h4>
 
-      <div class="person-image">
-        <img
-          src="aileen-donohoe.jpg"
-          alt="Aileen Donohoe, co-founder of Ad Personam Cultural Events Ltd"
-        />
-      </div>
+              <p class="project-sub">
+                Billy Roche's raw, quietly devastating drama, produced at Wexford Arts Centre
+                and Smock Alley Theatre, Dublin.
+              </p>
+            </div>
+          </article>
 
-      <div class="person-content">
+          <article class="project">
+            <div class="project-media contain">
+              <img
+                src="gallery-11.jpg"
+                alt="Filling the Well community arts event"
+              />
+            </div>
 
-        <h4>Aileen Donohoe</h4>
+            <div class="project-body">
+              <h4 class="project-title">
+                Filling the Well <span class="meta">(2024–2025)</span>
+              </h4>
 
-        <p class="person-role">
-          Co-Founder • Producer • Performer • Musician • Vocal Coach
-        </p>
+              <p class="project-sub">
+                A community-led Culture Night event in Rosslare Strand, bringing together
+                music, performance and local stories.
+              </p>
+            </div>
+          </article>
 
-        <p>
-          Aileen is a performer, producer, singing teacher and musician with
-          extensive experience creating theatre, music and community arts
-          projects throughout Ireland. She specialises in vocal performance,
-          music education and artistic producing, bringing warmth, creativity
-          and organisational expertise to every Ad Personam production.
-        </p>
+          <article class="project">
+            <div class="project-media contain">
+              <img
+                src="gallery-5.jpg"
+                alt="Sequah short film production image"
+              />
+            </div>
 
-        <div class="person-links">
+            <div class="project-body">
+              <h4 class="project-title">
+                Sequah <span class="meta">(2023)</span>
+              </h4>
 
-          <a
-            class="primary"
-            href="https://aileendonohoe.com/"
-            target="_blank"
-            rel="noopener"
-          >
-            Visit Aileen's Website
-          </a>
+              <p class="project-sub">
+                A short film by Billy Roche, created through a collaboration of
+                Wexford-based artists and performers.
+              </p>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-media contain">
+              <img
+                src="gallery-3.jpg"
+                alt="Christmas by Candlelight performance"
+              />
+            </div>
+
+            <div class="project-body">
+              <h4 class="project-title">
+                Christmas by Candlelight <span class="meta">(Ongoing)</span>
+              </h4>
+
+              <p class="project-sub">
+                An atmospheric seasonal performance series featuring live music,
+                theatre and storytelling.
+              </p>
+            </div>
+          </article>
 
         </div>
+      </section>
 
-      </div>
-
-    </article>
-
-  </div>
-
-</section>
-  </div>
-</section>
       <section id="gallery">
         <div class="section-title">
           <h3>Images</h3>
