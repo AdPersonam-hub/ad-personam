@@ -531,41 +531,50 @@
     }
 /* Meet the Founders */
 
+/* Meet the Founders */
+
 .people-grid{
   display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
+  grid-template-columns:1fr;
   gap:18px;
-  align-items:start;
-
+  max-width:900px;
+  margin:0 auto;
 }
 
 .person-card{
   display:grid;
-  grid-template-columns:180px 1fr;
-  gap:18px;
+  grid-template-columns:180px minmax(0,1fr);
+  gap:22px;
   align-items:start;
 
+  width:100%;
+  height:auto;
   padding:18px;
 
   background:var(--card);
   border:1px solid var(--line);
   border-radius:18px;
-
   box-shadow:0 1px 0 rgba(0,0,0,.02);
-
-  height:auto;
-  align-self:start;
 }
+
+.person-image{
+  width:180px;
 }
 
 .person-image img{
   display:block;
-  width:100%;
+  width:180px;
   height:230px;
   object-fit:cover;
   object-position:center top;
-  border-radius:14px;
+
   border:1px solid var(--line);
+  border-radius:14px;
+}
+
+.person-content{
+  min-width:0;
+  padding:4px 0;
 }
 
 .person-content h4{
@@ -582,6 +591,7 @@
 }
 
 .person-content p{
+  max-width:65ch;
   margin:0;
   color:var(--muted);
   font-size:13px;
@@ -599,38 +609,59 @@
   display:inline-flex;
   align-items:center;
   justify-content:center;
+
   padding:10px 12px;
-  border:1px solid var(--line);
+
+  background:#000;
+  color:#fff;
+  border:1px solid #000;
   border-radius:12px;
-  background:#fff;
+
   font-size:13px;
   font-weight:650;
 }
 
-.person-links a.primary{
-  background:#000;
-  color:#fff;
-  border-color:#000;
-}
-
 .person-links a:hover,
 .person-links a:focus-visible{
-  border-color:#000;
+  background:var(--gold-dark);
+  border-color:var(--gold-dark);
 }
 
-@media (max-width:860px){
+@media (max-width:640px){
+
   .people-grid{
-    grid-template-columns:1fr;
+    max-width:none;
+  }
+
+  .person-card{
+    grid-template-columns:120px minmax(0,1fr);
+    gap:14px;
+    padding:14px;
+  }
+
+  .person-image{
+    width:120px;
+  }
+
+  .person-image img{
+    width:120px;
+    height:160px;
   }
 }
 
-@media (max-width:560px){
+@media (max-width:480px){
+
   .person-card{
     grid-template-columns:1fr;
   }
 
+  .person-image{
+    width:100%;
+  }
+
   .person-image img{
-    height:360px;
+    width:100%;
+    height:320px;
   }
 }
     /* Gallery */
