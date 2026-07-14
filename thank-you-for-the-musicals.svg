@@ -1,1 +1,25 @@
-thank-you-for-the-musicals.svg
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+<title id="title">Musical theatre stage</title>
+<desc id="desc">A vintage microphone on a lit stage framed by red theatre curtains.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#110b10"/><stop offset="1" stop-color="#020202"/></linearGradient>
+  <radialGradient id="spot" cx="50%" cy="25%" r="55%"><stop stop-color="#fff4c7" stop-opacity=".75"/><stop offset="1" stop-color="#fff4c7" stop-opacity="0"/></radialGradient>
+  <linearGradient id="curtain" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#4e0610"/><stop offset=".5" stop-color="#9e1627"/><stop offset="1" stop-color="#4e0610"/></linearGradient>
+</defs>
+<rect width="1200" height="700" fill="url(#bg)"/>
+<ellipse cx="600" cy="180" rx="430" ry="320" fill="url(#spot)"/>
+<path d="M0 0h270c-15 120-8 250 10 370 15 100 4 215-48 330H0z" fill="url(#curtain)"/>
+<path d="M1200 0H930c15 120 8 250-10 370-15 100-4 215 48 330h232z" fill="url(#curtain)"/>
+<g stroke="#2d0208" stroke-width="10" opacity=".5"><path d="M70 0c25 220 5 470-20 700"/><path d="M150 0c20 220 5 470-20 700"/><path d="M1050 0c-20 220-5 470 20 700"/><path d="M1130 0c-25 220-5 470 20 700"/></g>
+<ellipse cx="600" cy="630" rx="290" ry="38" fill="#000" opacity=".7"/>
+<g transform="translate(600 355)">
+  <rect x="-10" y="70" width="20" height="215" rx="8" fill="#b9a46d"/>
+  <path d="M-90 285h180l35 30h-250z" fill="#8f7a48"/>
+  <rect x="-64" y="-120" width="128" height="205" rx="60" fill="#d3c18b" stroke="#6f5f36" stroke-width="12"/>
+  <g stroke="#5b4b2b" stroke-width="10"><path d="M-45-78h90"/><path d="M-50-42h100"/><path d="M-52-6h104"/><path d="M-48 30h96"/></g>
+  <path d="M-80 70c-35 35-45 80-43 118" fill="none" stroke="#b9a46d" stroke-width="12"/>
+  <path d="M80 70c35 35 45 80 43 118" fill="none" stroke="#b9a46d" stroke-width="12"/>
+</g>
+<g fill="#f4d77b" opacity=".9"><circle cx="350" cy="160" r="8"/><circle cx="450" cy="110" r="6"/><circle cx="740" cy="130" r="7"/><circle cx="840" cy="180" r="8"/></g>
+<text x="600" y="90" text-anchor="middle" fill="#fff" font-family="Georgia,serif" font-size="48" letter-spacing="8">MUSICAL THEATRE</text>
+</svg>
