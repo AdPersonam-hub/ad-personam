@@ -529,7 +529,101 @@
       background:var(--gold-dark);
       border-color:var(--gold-dark);
     }
+/* Meet the Founders */
 
+.people-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
+}
+
+.person-card{
+  display:grid;
+  grid-template-columns:180px 1fr;
+  gap:18px;
+  align-items:start;
+  padding:18px;
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:18px;
+  box-shadow:0 1px 0 rgba(0,0,0,.02);
+}
+
+.person-image img{
+  display:block;
+  width:100%;
+  height:230px;
+  object-fit:cover;
+  object-position:center top;
+  border-radius:14px;
+  border:1px solid var(--line);
+}
+
+.person-content h4{
+  margin:0 0 4px;
+  font-size:18px;
+  font-weight:850;
+}
+
+.person-role{
+  margin:0 0 12px;
+  color:var(--gold-dark);
+  font-size:13px;
+  font-weight:700;
+}
+
+.person-content p{
+  margin:0;
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.6;
+}
+
+.person-links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:16px;
+}
+
+.person-links a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:10px 12px;
+  border:1px solid var(--line);
+  border-radius:12px;
+  background:#fff;
+  font-size:13px;
+  font-weight:650;
+}
+
+.person-links a.primary{
+  background:#000;
+  color:#fff;
+  border-color:#000;
+}
+
+.person-links a:hover,
+.person-links a:focus-visible{
+  border-color:#000;
+}
+
+@media (max-width:860px){
+  .people-grid{
+    grid-template-columns:1fr;
+  }
+}
+
+@media (max-width:560px){
+  .person-card{
+    grid-template-columns:1fr;
+  }
+
+  .person-image img{
+    height:360px;
+  }
+}
     /* Gallery */
 
     .gallery{
@@ -723,12 +817,13 @@
 
         <nav aria-label="Primary">
           <ul>
-            <li><a href="#projects">Current Projects</a></li>
-            <li><a href="#past-productions">Past Productions</a></li>
-            <li><a href="#project-list">Full Project List</a></li>
-            <li><a href="#services">What We Do</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
+  <li><a href="#projects">Current Projects</a></li>
+  <li><a href="#past-productions">Past Productions</a></li>
+  <li><a href="#meet-the-founders">Meet the Founders</a></li>
+  <li><a href="#project-list">Full Project List</a></li>
+  <li><a href="#services">What We Do</a></li>
+  <li><a href="#contact">Contact</a></li>
+</ul>
         </nav>
 
       </div>
@@ -1028,7 +1123,108 @@
         </p>
       </div>
     </article>
+<section id="meet-the-founders">
 
+  <div class="section-title">
+    <h3>Meet the Founders</h3>
+
+    <p>
+      Ad Personam Cultural Events Ltd was founded by two experienced artists
+      whose combined careers span directing, producing, acting, music,
+      education and cultural event production.
+    </p>
+  </div>
+
+  <div class="people-grid">
+
+    <article class="person-card">
+
+      <div class="person-image">
+        <img
+          src="peter-mccamley.jpg"
+          alt="Peter McCamley, co-founder of Ad Personam Cultural Events Ltd"
+        />
+      </div>
+
+      <div class="person-content">
+
+        <h4>Peter McCamley</h4>
+
+        <p class="person-role">
+          Co-Founder • Director • Producer • Actor • Educator
+        </p>
+
+        <p>
+          Peter is a theatre director, producer, actor and educator with more
+          than twenty years of professional experience across theatre, opera,
+          film and performance training. He has directed professional
+          productions throughout Ireland and the UK, teaches acting and voice,
+          and is committed to creating artist-led work rooted in community
+          and place.
+        </p>
+
+        <div class="person-links">
+
+          <a
+            class="primary"
+            href="https://adpersonam-hub.github.io/peter-mccamley-portfolio/"
+            target="_blank"
+            rel="noopener"
+          >
+            Visit Peter's Website
+          </a>
+
+        </div>
+
+      </div>
+
+    </article>
+
+    <article class="person-card">
+
+      <div class="person-image">
+        <img
+          src="aileen-donohoe.jpg"
+          alt="Aileen Donohoe, co-founder of Ad Personam Cultural Events Ltd"
+        />
+      </div>
+
+      <div class="person-content">
+
+        <h4>Aileen Donohoe</h4>
+
+        <p class="person-role">
+          Co-Founder • Producer • Performer • Musician • Vocal Coach
+        </p>
+
+        <p>
+          Aileen is a performer, producer, singing teacher and musician with
+          extensive experience creating theatre, music and community arts
+          projects throughout Ireland. She specialises in vocal performance,
+          music education and artistic producing, bringing warmth, creativity
+          and organisational expertise to every Ad Personam production.
+        </p>
+
+        <div class="person-links">
+
+          <a
+            class="primary"
+            href="https://aileendonohoe.com/"
+            target="_blank"
+            rel="noopener"
+          >
+            Visit Aileen's Website
+          </a>
+
+        </div>
+
+      </div>
+
+    </article>
+
+  </div>
+
+</section>
   </div>
 </section>
       <section id="gallery">
