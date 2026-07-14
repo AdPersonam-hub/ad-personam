@@ -3,8 +3,13 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <title>Ad Personam Cultural Events Ltd</title>
-  <meta name="description" content="Ad Personam Cultural Events Ltd produces theatre, music and interdisciplinary cultural events rooted in community and collaboration." />
+
+  <meta
+    name="description"
+    content="Ad Personam Cultural Events Ltd produces theatre, music and interdisciplinary cultural events rooted in community and collaboration."
+  />
 
   <style>
     :root{
@@ -14,582 +19,1443 @@
       --muted:#5a5a5a;
       --muted2:#3f3f3f;
       --line:#e7e5df;
-      --shadow: 0 10px 26px rgba(0,0,0,.08);
+      --gold:#b89132;
+      --gold-dark:#92701d;
+      --shadow:0 10px 26px rgba(0,0,0,.08);
     }
 
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);}
-    a{color:inherit;text-decoration:none}
-    .wrap{max-width:1080px;margin:0 auto;padding:0 18px}
+    *{
+      box-sizing:border-box;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    html,
+    body{
+      margin:0;
+      padding:0;
+      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+      background:var(--bg);
+      color:var(--text);
+    }
+
+    body{
+      line-height:1.5;
+    }
+
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+    img{
+      max-width:100%;
+    }
+
+    button,
+    input,
+    textarea{
+      font:inherit;
+    }
+
+    .wrap{
+      max-width:1080px;
+      margin:0 auto;
+      padding:0 18px;
+    }
 
     /* Header */
-    header{position:sticky;top:0;z-index:30;background:rgba(250,249,247,.92);backdrop-filter: blur(10px);border-bottom:1px solid var(--line);}
-    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
-    .brand{display:flex;align-items:center;gap:12px;min-width:220px}
-    .brand h1{font-size:14px;line-height:1.2;margin:0;font-weight:750;letter-spacing:.2px}
-    .brand p{margin:0;font-size:12px;color:var(--muted)}
 
-    nav ul{list-style:none;margin:0;padding:0;display:flex;gap:16px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
-    nav a{font-size:13px;color:var(--muted);padding:8px 10px;border-radius:10px;border:1px solid transparent}
-    nav a:hover{color:var(--text);border-color:var(--line);background:#ffffff}
+    header{
+      position:sticky;
+      top:0;
+      z-index:30;
+      background:rgba(250,249,247,.94);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid var(--line);
+    }
+
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      padding:14px 0;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      min-width:220px;
+    }
+
+    .brand img{
+      width:42px;
+      height:auto;
+      border-radius:10px;
+      box-shadow:0 10px 25px rgba(0,0,0,.22);
+    }
+
+    .brand h1{
+      margin:0;
+      font-size:14px;
+      line-height:1.2;
+      font-weight:750;
+      letter-spacing:.2px;
+    }
+
+    .brand p{
+      margin:0;
+      color:var(--muted);
+      font-size:12px;
+    }
+
+    nav ul{
+      display:flex;
+      align-items:center;
+      justify-content:flex-end;
+      flex-wrap:wrap;
+      gap:10px;
+      margin:0;
+      padding:0;
+      list-style:none;
+    }
+
+    nav a{
+      display:block;
+      padding:8px 10px;
+      border:1px solid transparent;
+      border-radius:10px;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    nav a:hover,
+    nav a:focus-visible{
+      color:var(--text);
+      background:#fff;
+      border-color:var(--line);
+    }
 
     /* Hero */
-    .hero{padding:56px 0 22px}
-    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:24px;align-items:stretch}
-    .hero h2{font-size:38px;line-height:1.05;margin:0 0 12px;font-weight:850;letter-spacing:-.6px}
-    .hero p{margin:0 0 18px;color:var(--muted);font-size:16px;line-height:1.6;max-width:60ch}
 
-    .pillrow{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 0}
-    .pill{font-size:12px;color:var(--text);border:1px solid var(--line);background:#ffffff;padding:8px 10px;border-radius:999px}
+    .hero{
+      padding:56px 0 22px;
+    }
 
-    .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:11px 14px;border-radius:12px;border:1px solid var(--line);background:#ffffff;color:var(--text);font-weight:650;font-size:13px}
-    .btn:hover{border-color:#000;box-shadow:0 14px 30px rgba(0,0,0,.10)}
-    .btn.primary{background:#000;color:#fff;border-color:#000}
+    .hero-image{
+      margin-bottom:24px;
+    }
 
-    .card{background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow)}
-    .hero-card{padding:18px}
+    .hero-image img{
+      display:block;
+      width:100%;
+      height:320px;
+      object-fit:contain;
+      background:#f4f3ef;
+      border:1px solid var(--line);
+      border-radius:18px;
+      box-shadow:var(--shadow);
+    }
 
-    .kpi{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:12px}
-    .kpi .mini{padding:12px;border-radius:14px;background:#f6f5f2;border:1px solid var(--line)}
-    .kpi .num{font-size:18px;font-weight:850}
-    .kpi .lbl{font-size:12px;color:var(--muted);margin-top:3px}
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.15fr .85fr;
+      gap:24px;
+      align-items:stretch;
+    }
 
-    .meta{color:var(--muted2);font-size:12px;margin-top:6px}
+    .hero h2{
+      margin:0 0 12px;
+      font-size:38px;
+      line-height:1.05;
+      font-weight:850;
+      letter-spacing:-.6px;
+    }
 
-    .hero-image{margin-top:18px}
-    .hero-image img{width:100%;height:320px;object-fit:contain;background:#f4f3ef;border-radius:18px;border:1px solid var(--line);box-shadow:var(--shadow);display:block}
+    .hero p{
+      max-width:60ch;
+      margin:0 0 18px;
+      color:var(--muted);
+      font-size:16px;
+      line-height:1.6;
+    }
 
-    /* Sections */
-    section{padding:34px 0}
-    .section-title{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:14px}
-    .section-title h3{margin:0;font-size:18px;font-weight:800;letter-spacing:.2px}
-    .section-title p{margin:0;color:var(--muted);font-size:13px;max-width:70ch}
+    .pillrow{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:18px;
+    }
 
-    .grid{display:grid;gap:14px}
-    .grid.two{grid-template-columns:repeat(2,1fr)}
-    .grid.three{grid-template-columns:repeat(3,1fr)}
+    .pill{
+      padding:8px 10px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      background:#fff;
+      color:var(--text);
+      font-size:12px;
+    }
 
-    .tile{padding:16px;border-radius:18px;background:var(--card);border:1px solid var(--line);box-shadow:0 1px 0 rgba(0,0,0,.02)}
-    .tile h4{margin:0 0 8px;font-size:14px;font-weight:800}
-    .tile p{margin:0;color:var(--muted);font-size:13px;line-height:1.55}
+    .cta{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:18px;
+    }
 
-    .list{margin:10px 0 0;padding:0;list-style:none;display:grid;gap:8px}
-    .list li{display:flex;gap:10px;align-items:flex-start;color:var(--muted);font-size:13px;line-height:1.45}
-    .dot{width:9px;height:9px;border-radius:50%;background:#000;margin-top:6px;flex:0 0 9px}
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:11px 14px;
+      border:1px solid var(--line);
+      border-radius:12px;
+      background:#fff;
+      color:var(--text);
+      font-size:13px;
+      font-weight:650;
+      cursor:pointer;
+    }
+
+    .btn:hover,
+    .btn:focus-visible{
+      border-color:#000;
+      box-shadow:0 14px 30px rgba(0,0,0,.10);
+    }
+
+    .btn.primary{
+      background:#000;
+      color:#fff;
+      border-color:#000;
+    }
+
+    .btn.gold{
+      background:var(--gold);
+      color:#fff;
+      border-color:var(--gold);
+    }
+
+    .btn.gold:hover,
+    .btn.gold:focus-visible{
+      background:var(--gold-dark);
+      border-color:var(--gold-dark);
+    }
+
+    .card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:18px;
+      box-shadow:var(--shadow);
+    }
+
+    .hero-card{
+      padding:18px;
+    }
+
+    .snapshot-head{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+    }
+
+    .snapshot-title{
+      font-weight:850;
+      letter-spacing:.2px;
+    }
+
+    .kpi{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:12px;
+      margin-top:12px;
+    }
+
+    .kpi .mini{
+      padding:12px;
+      border:1px solid var(--line);
+      border-radius:14px;
+      background:#f6f5f2;
+    }
+
+    .kpi .num{
+      font-size:18px;
+      font-weight:850;
+    }
+
+    .kpi .lbl{
+      margin-top:3px;
+      color:var(--muted);
+      font-size:12px;
+    }
+
+    .meta{
+      margin-top:6px;
+      color:var(--muted2);
+      font-size:12px;
+    }
+
+    /* General sections */
+
+    section{
+      padding:34px 0;
+    }
+
+    .section-title{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap:16px;
+      margin-bottom:14px;
+    }
+
+    .section-title h3{
+      margin:0;
+      font-size:18px;
+      font-weight:800;
+      letter-spacing:.2px;
+    }
+
+    .section-title p{
+      max-width:70ch;
+      margin:0;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    .grid{
+      display:grid;
+      gap:14px;
+    }
+
+    .grid.two{
+      grid-template-columns:repeat(2,1fr);
+    }
+
+    .grid.three{
+      grid-template-columns:repeat(3,1fr);
+    }
+
+    .tile{
+      padding:16px;
+      border:1px solid var(--line);
+      border-radius:18px;
+      background:var(--card);
+      box-shadow:0 1px 0 rgba(0,0,0,.02);
+    }
+
+    .tile h4{
+      margin:0 0 8px;
+      font-size:14px;
+      font-weight:800;
+    }
+
+    .tile p{
+      margin:0;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.55;
+    }
+
+    .tile p + p{
+      margin-top:10px;
+    }
+
+    .list{
+      display:grid;
+      gap:8px;
+      margin:10px 0 0;
+      padding:0;
+      list-style:none;
+    }
+
+    .list li{
+      display:flex;
+      align-items:flex-start;
+      gap:10px;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.45;
+    }
+
+    .dot{
+      width:9px;
+      height:9px;
+      flex:0 0 9px;
+      margin-top:6px;
+      border-radius:50%;
+      background:#000;
+    }
+
+    .tag{
+      padding:6px 8px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      background:#f6f5f2;
+      color:#222;
+      font-size:11px;
+    }
 
     /* Projects */
-    .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-    .project{background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:0 1px 0 rgba(0,0,0,.02);overflow:hidden;display:flex;flex-direction:column}
-    .project-media{border-bottom:1px solid var(--line);background:#fff}
-    .project-media img{width:100%;height:220px;object-fit:cover;display:block}
-    .project-body{padding:16px;display:flex;flex-direction:column;gap:10px}
-    .project-title{margin:0;font-size:16px;font-weight:850;letter-spacing:-.2px}
-    .project-sub{margin:0;color:var(--muted);font-size:13px;line-height:1.5}
-    .project-links{display:flex;gap:10px;flex-wrap:wrap;margin-top:4px}
-    .project-links a{display:inline-flex;align-items:center;justify-content:center;padding:10px 12px;border-radius:12px;border:1px solid var(--line);background:#fff;font-size:13px;font-weight:650}
-    .project-links a.primary{background:#000;color:#fff;border-color:#000}
-/* Projects */
-.project-media{
-  height:260px;
-  overflow:hidden;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background:#ffffff;
-}
 
-.project-media img{
-  width:100%;
-  height:100%;
-  object-fit:contain;
-}
+    .projects{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:14px;
+    }
 
-/* Gallery */
-.gallery{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:14px;
-}
+    .projects.single{
+      grid-template-columns:minmax(0,1fr);
+      max-width:720px;
+    }
+
+    .project{
+      display:flex;
+      flex-direction:column;
+      overflow:hidden;
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:18px;
+      box-shadow:0 1px 0 rgba(0,0,0,.02);
+    }
+
+    .project-media{
+      position:relative;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      height:260px;
+      overflow:hidden;
+      background:#fff;
+      border-bottom:1px solid var(--line);
+    }
+
+    .project-media img{
+      display:block;
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      transition:transform .35s ease;
+    }
+
+    .project:hover .project-media img{
+      transform:scale(1.025);
+    }
+
+    .project-media.contain img{
+      object-fit:contain;
+    }
+
+    .booking-badge{
+      position:absolute;
+      top:16px;
+      right:16px;
+      padding:8px 13px;
+      border-radius:999px;
+      background:var(--gold);
+      color:#fff;
+      box-shadow:0 8px 18px rgba(0,0,0,.25);
+      font-size:11px;
+      font-weight:800;
+      letter-spacing:.7px;
+    }
+
+    .project-body{
+      display:flex;
+      flex:1;
+      flex-direction:column;
+      gap:10px;
+      padding:16px;
+    }
+
+    .project-title{
+      margin:0;
+      font-size:16px;
+      font-weight:850;
+      letter-spacing:-.2px;
+    }
+
+    .project-sub{
+      margin:0;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.55;
+    }
+
+    .project-links{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:auto;
+      padding-top:4px;
+    }
+
+    .project-links a{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:10px 12px;
+      border:1px solid var(--line);
+      border-radius:12px;
+      background:#fff;
+      font-size:13px;
+      font-weight:650;
+    }
+
+    .project-links a:hover,
+    .project-links a:focus-visible{
+      border-color:#000;
+    }
+
+    .project-links a.primary{
+      background:#000;
+      color:#fff;
+      border-color:#000;
+    }
+
+    .project-links a.gold{
+      background:var(--gold);
+      color:#fff;
+      border-color:var(--gold);
+    }
+
+    .project-links a.gold:hover,
+    .project-links a.gold:focus-visible{
+      background:var(--gold-dark);
+      border-color:var(--gold-dark);
+    }
 
     /* Gallery */
-    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.gallery a{display:block}
-    .gallery img{width:100%;height:180px;object-fit:contain;background:#ffffff;border-radius:16px;border:1px solid var(--line);box-shadow:var(--shadow);display:block}
 
-    /* Work */
-    .work{display:grid;grid-template-columns:1fr;gap:14px}
-    .work-item{padding:16px;border-radius:18px;border:1px solid var(--line);background:#ffffff;box-shadow:0 1px 0 rgba(0,0,0,.02)}
-    .work-top{display:flex;align-items:flex-start;justify-content:space-between;gap:16px}
-    .work-item h4{margin:0;font-size:14px;font-weight:850}
-    .tagrow{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
-    .tag{font-size:11px;color:#222;border:1px solid var(--line);padding:6px 8px;border-radius:999px;background:#f6f5f2}
+    .gallery{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:14px;
+    }
+
+    .gallery img{
+      display:block;
+      width:100%;
+      height:180px;
+      object-fit:contain;
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:16px;
+      box-shadow:var(--shadow);
+    }
+
+    /* Full project list */
+
+    .work{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:14px;
+    }
+
+    .work-item{
+      padding:16px;
+      border:1px solid var(--line);
+      border-radius:18px;
+      background:#fff;
+      box-shadow:0 1px 0 rgba(0,0,0,.02);
+    }
+
+    .work-top{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:16px;
+    }
+
+    .work-item h4{
+      margin:0;
+      font-size:14px;
+      font-weight:850;
+    }
 
     /* Contact */
-    .contact{display:grid;grid-template-columns:1.1fr .9fr;gap:14px}
-    .contact .tile{height:100%}
-    .field{display:grid;gap:6px;margin-top:10px}
-    label{font-size:12px;color:var(--muted)}
-    input,textarea{background:#ffffff;border:1px solid var(--line);border-radius:14px;padding:10px 12px;color:var(--text);font-size:14px;outline:none}
-    input:focus,textarea:focus{border-color:#000}
-    textarea{min-height:120px;resize:vertical}
 
-    footer{padding:28px 0 40px;color:var(--muted);font-size:12px;border-top:1px solid var(--line)}
-
-
-    /* Lightbox (no JS) */
-    .lightbox{position:fixed;inset:0;background:rgba(0,0,0,.85);display:none;align-items:center;justify-content:center;z-index:100}
-    .lightbox img{max-width:92vw;max-height:92vh;border-radius:12px;background:#fff}
-    .lightbox:target{display:flex}
-    .lightbox::after{content:"×";position:absolute;top:18px;right:26px;font-size:40px;line-height:1;color:#fff}
-
-
-    /* Responsive (add-on) */
-    @media (max-width: 860px){
-      .hero-grid,.grid.two,.grid.three,.contact{grid-template-columns:1fr}
-      .projects{grid-template-columns:1fr}
-      .gallery{grid-template-columns:repeat(2,1fr)}
-      .hero h2{font-size:32px}
-      nav ul{gap:6px}
+    .contact{
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:14px;
     }
 
-    @media (max-width: 560px){
-      .gallery{grid-template-columns:1fr}
-      .nav{align-items:flex-start}
-      nav ul{justify-content:flex-start}
+    .contact .tile{
+      height:100%;
     }
 
-</style>
+    .field{
+      display:grid;
+      gap:6px;
+      margin-top:10px;
+    }
+
+    label{
+      color:var(--muted);
+      font-size:12px;
+    }
+
+    input,
+    textarea{
+      width:100%;
+      padding:10px 12px;
+      border:1px solid var(--line);
+      border-radius:14px;
+      outline:none;
+      background:#fff;
+      color:var(--text);
+      font-size:14px;
+    }
+
+    input:focus,
+    textarea:focus{
+      border-color:#000;
+    }
+
+    textarea{
+      min-height:120px;
+      resize:vertical;
+    }
+
+    footer{
+      padding:28px 0 40px;
+      border-top:1px solid var(--line);
+      color:var(--muted);
+      font-size:12px;
+    }
+
+    .footer-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      flex-wrap:wrap;
+      gap:12px;
+    }
+
+    /* Responsive */
+
+    @media (max-width:860px){
+      .hero-grid,
+      .grid.two,
+      .grid.three,
+      .projects,
+      .contact{
+        grid-template-columns:1fr;
+      }
+
+      .hero h2{
+        font-size:32px;
+      }
+
+      .project-media{
+        height:230px;
+      }
+
+      .gallery{
+        grid-template-columns:repeat(2,1fr);
+      }
+    }
+
+    @media (max-width:640px){
+      .nav{
+        align-items:flex-start;
+        flex-direction:column;
+      }
+
+      nav ul{
+        justify-content:flex-start;
+      }
+
+      .hero{
+        padding-top:30px;
+      }
+
+      .hero h2{
+        font-size:28px;
+      }
+
+      .hero-image img{
+        height:240px;
+      }
+
+      .section-title{
+        align-items:flex-start;
+        flex-direction:column;
+      }
+
+      .gallery{
+        grid-template-columns:1fr;
+      }
+
+      .gallery img{
+        height:220px;
+      }
+
+      .kpi{
+        grid-template-columns:1fr;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
-  <div class="wrap">
-    <div class="nav">
-      <a class="brand" href="#top" aria-label="Ad Personam Cultural Events Ltd">
-        <img src="Ad Personam Bold (1).png" alt="Ad Personam Cultural Events Ltd logo" style="width:42px;height:auto;border-radius:10px;box-shadow:0 10px 25px rgba(0,0,0,.25)" />
-        <div>
-          <h1>Ad Personam Cultural Events Ltd</h1>
-          <p>Theatre • Music • Cultural Events</p>
-        </div>
-      </a>
-      <nav aria-label="Primary">
-        <ul>
-          <li><a href="#projects">Current projects</a></li>
-          <li><a href="#past-productions">Past productions</a></li>
-          <li><a href="#past-productions">Past Productions</a></li>
-          <li><a href="#services">What we do</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </div>
-</header>
+  <header>
+    <div class="wrap">
+      <div class="nav">
 
-<main id="top">
-  <div class="wrap">
-
-    <section class="hero">
-      <!-- Hero image directly under header -->
-      <div class="hero-image">
-        <img src="hero.jpg" alt="Ad Personam Cultural Events production image">
-      </div>
-
-      <div class="hero-grid">
-        <div>
-          <h2>Thoughtfully made theatre, music and cultural events — rooted in place, led by artists, and built with care.</h2>
-          <p>
-            Ad Personam Cultural Events Ltd is a Wexford-based producing company creating theatre, music and interdisciplinary cultural projects.
-            We blend professional artistic practice with strong community engagement — building events that are rooted in place and built to last.
-          </p>
-          <div class="cta">
-            <a class="btn primary" href="#contact">Get in touch</a>
-            <a class="btn" href="#work">See recent work</a>
+        <a class="brand" href="#top" aria-label="Ad Personam Cultural Events Ltd">
+          <img
+            src="Ad Personam Bold (1).png"
+            alt="Ad Personam Cultural Events Ltd logo"
+          />
+          <div>
+            <h1>Ad Personam Cultural Events Ltd</h1>
+            <p>Theatre • Music • Cultural Events</p>
           </div>
-          <div class="pillrow" aria-label="Key themes">
-            <div class="pill">Artist-led</div>
-            <div class="pill">Community-engaged</div>
-            <div class="pill">High production values</div>
-            <div class="pill">Local roots, national reach</div>
-          </div>
-        </div>
+        </a>
 
-        <div class="card hero-card" role="region" aria-label="Snapshot">
-          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;">
-            <div>
-              <div style="font-weight:850;letter-spacing:.2px;">Company snapshot</div>
-              <div class="meta">A quick view for presenters, partners and funders.</div>
-            </div>
-            <div class="tag">Updated: 2026</div>
-          </div>
-
-          <div class="kpi">
-            <div class="mini">
-              <div class="num">Theatre</div>
-              <div class="lbl">Productions & readings</div>
-            </div>
-            <div class="mini">
-              <div class="num">Music</div>
-              <div class="lbl">Youth & community projects</div>
-            </div>
-            <div class="mini">
-              <div class="num">Festivals</div>
-              <div class="lbl">Seasonal & site-based events</div>
-            </div>
-            <div class="mini">
-              <div class="num">Film</div>
-              <div class="lbl">Short-form collaborations</div>
-            </div>
-          </div>
-
-          <ul class="list" style="margin-top:14px">
-            <li><span class="dot"></span><span><strong>Mission:</strong> Make artistically ambitious, accessible work with professional artists at the heart of communities.</span></li>
-            <li><span class="dot"></span><span><strong>Based:</strong> Wexford, Ireland.</span></li>
-            <li><span class="dot"></span><span><strong>Open to:</strong> Co-productions, touring partners, schools, festivals and public commissions.</span></li>
+        <nav aria-label="Primary">
+          <ul>
+            <li><a href="#projects">Current Projects</a></li>
+            <li><a href="#past-productions">Past Productions</a></li>
+            <li><a href="#project-list">Full Project List</a></li>
+            <li><a href="#services">What We Do</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
-        </div>
+        </nav>
+
       </div>
-    </section>
-
-    <section id="about">
-      <div class="section-title">
-        <h3>About</h3>
-        <p>Who we are, what we make, and the values behind the work.</p>
-      </div>
-      <div class="grid two">
-        <div class="tile">
-          <h4>Our approach</h4>
-          <p>
-            We produce work that brings professional artistic standards into public life — from intimate theatre productions to large-scale seasonal events.
-            Our focus is on clarity, craft, and collaboration: strong writing, strong performers, and projects that feel meaningful to the communities they’re made with.
-          </p>
-          <ul class="list">
-            <li><span class="dot"></span><span>Artist-led, story-first production.</span></li>
-            <li><span class="dot"></span><span>Accessible experiences without lowering ambition.</span></li>
-            <li><span class="dot"></span><span>Partnerships with venues, festivals, schools and local organisations.</span></li>
-          </ul>
-        </div>
-        <div class="tile">
-          <h4>Leadership</h4>
-          <p>
-            The company is co-founded by theatre director, producer, actor and educator <strong>Peter McCamley</strong> and producer, actor, singing teacher and musician <strong>Aileen Donohoe</strong>.
-            Their practice spans directing, producing, performance training and community-based arts programming.
-          </p>
-          <p class="meta">Want a full director bio for a brochure or funding application? Ask and we’ll send a tailored version.</p>
-          <div class="cta" style="margin-top:12px">
-            <a class="btn" href="#contact">Request a company pack</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects">
-      <div class="section-title">
-        <h3>Current projects</h3>
-        <p>What we’re making now — and where you can see it.</p>
-      </div>
-
-  <article class="project">
-
-  <div class="project-media" style="position:relative;">
-
-    <img src="thank-you-for-the-musicals.jpg"
-         alt="Thank You For The Musicals at Kellys Hotel, Rosslare">
-
-    <div style="
-      position:absolute;
-      top:16px;
-      right:16px;
-      background:#c9a646;
-      color:white;
-      padding:8px 14px;
-      border-radius:999px;
-      font-size:12px;
-      font-weight:700;
-      letter-spacing:.5px;
-      box-shadow:0 8px 18px rgba(0,0,0,.25);
-    ">
-      NOW BOOKING
     </div>
+  </header>
 
-  </div>
+  <main id="top">
+    <div class="wrap">
 
-  <div class="project-body">
+      <section class="hero">
 
-    <h4 class="project-title">
-      Thank You For The Musicals
-    </h4>
+        <div class="hero-image">
+          <img
+            src="hero.jpg"
+            alt="Ad Personam Cultural Events production image"
+          />
+        </div>
 
-    <p class="project-sub">
-      A joyful celebration of the world's greatest musicals, featuring unforgettable songs from the West End and Broadway. Performed live every Wednesday throughout Summer 2027 in the Ivy Room at Kellys Resort Hotel, Rosslare.
-    </p>
+        <div class="hero-grid">
 
-    <div class="project-links">
+          <div>
+            <h2>
+              Thoughtfully made theatre, music and cultural events — rooted in place,
+              led by artists, and built with care.
+            </h2>
 
-      <a class="primary"
-         href="https://www.kellys.ie/dining/nightly-entertainment-music/"
-         target="_blank"
-         rel="noopener">
-         🎟 Book Here
-      </a>
-
-      <a href="#past-productions">
-         View Past Productions
-      </a>
-
-    </div>
-
-  </div>
-
-</article>
-  </a>
-
-  <a
-     href="#past-productions">
-     View Our Work
-  </a>
-
-</div>
+            <p>
+              Ad Personam Cultural Events Ltd is a Wexford-based producing company creating
+              theatre, music and interdisciplinary cultural projects. We blend professional
+              artistic practice with strong community engagement — building events that are
+              rooted in place and built to last.
             </p>
+
+            <div class="cta">
+              <a class="btn primary" href="#contact">Get in touch</a>
+              <a class="btn" href="#past-productions">See past productions</a>
+            </div>
+
+            <div class="pillrow" aria-label="Key themes">
+              <div class="pill">Artist-led</div>
+              <div class="pill">Community-engaged</div>
+              <div class="pill">High production values</div>
+              <div class="pill">Local roots, national reach</div>
+            </div>
           </div>
-        </article>
-      </div>
-    </section>
 
-    <section id="past-productions">
-      <div class="section-title">
-        <h3>Past productions</h3>
-        <p>A selection of theatre, film, music and community projects produced by Ad Personam.</p>
-      </div>
+          <div class="card hero-card" role="region" aria-label="Company snapshot">
 
-      <div class="projects">
-        <article class="project">
-          <div class="project-media">
-            <img src="project-1.jpg" alt="Of Mornington production image">
+            <div class="snapshot-head">
+              <div>
+                <div class="snapshot-title">Company snapshot</div>
+                <div class="meta">A quick view for presenters, partners and funders.</div>
+              </div>
+
+              <div class="tag">Updated: 2027</div>
+            </div>
+
+            <div class="kpi">
+              <div class="mini">
+                <div class="num">Theatre</div>
+                <div class="lbl">Productions and readings</div>
+              </div>
+
+              <div class="mini">
+                <div class="num">Music</div>
+                <div class="lbl">Youth and community projects</div>
+              </div>
+
+              <div class="mini">
+                <div class="num">Festivals</div>
+                <div class="lbl">Seasonal and site-based events</div>
+              </div>
+
+              <div class="mini">
+                <div class="num">Film</div>
+                <div class="lbl">Short-form collaborations</div>
+              </div>
+            </div>
+
+            <ul class="list" style="margin-top:14px;">
+              <li>
+                <span class="dot"></span>
+                <span>
+                  <strong>Mission:</strong> Make artistically ambitious, accessible work
+                  with professional artists at the heart of communities.
+                </span>
+              </li>
+
+              <li>
+                <span class="dot"></span>
+                <span><strong>Based:</strong> Wexford, Ireland.</span>
+              </li>
+
+              <li>
+                <span class="dot"></span>
+                <span>
+                  <strong>Open to:</strong> Co-productions, touring partners, schools,
+                  festivals and public commissions.
+                </span>
+              </li>
+            </ul>
+
           </div>
-          <div class="project-body">
-            <h4 class="project-title">Of Mornington</h4>
-            <p class="project-sub">Billy Roche’s raw, quietly devastating drama, produced at Wexford Arts Centre and Smock Alley Theatre, Dublin.</p>
-          </div>
-        </article>
-
-        <article class="project">
-          <div class="project-media">
-            <img src="gallery-8.jpg" alt="Filling the Well community arts event">
-          </div>
-          <div class="project-body">
-            <h4 class="project-title">Filling the Well</h4>
-            <p class="project-sub">A community-led Culture Night event in Rosslare Strand, bringing together music, performance and local stories.</p>
-          </div>
-        </article>
-
-        <article class="project">
-          <div class="project-media">
-            <img src="gallery-5.jpg" alt="Sequah short film production image">
-          </div>
-          <div class="project-body">
-            <h4 class="project-title">Sequah</h4>
-            <p class="project-sub">A short film by Billy Roche, created through a collaboration of Wexford-based artists and performers.</p>
-          </div>
-        </article>
-
-        <article class="project">
-          <div class="project-media">
-            <img src="gallery-10.jpg" alt="Christmas by Candlelight performance">
-          </div>
-          <div class="project-body">
-            <h4 class="project-title">Christmas by Candlelight</h4>
-            <p class="project-sub">An atmospheric seasonal performance series featuring live music, theatre and storytelling.</p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-<section id="gallery">
-      <div class="section-title">
-        <h3>Images</h3>
-        <p>A glimpse of recent productions, events and collaborations.</p>
-      </div>
-
-      <div class="gallery">
-        <img src="gallery-1.jpg" alt="">
-<img src="gallery-2.jpg" alt="">
-<img src="gallery-3.jpg" alt="">
-<img src="gallery-4.jpg" alt="">
-        <img src="gallery-5.jpg" alt="">
-        <img src="gallery-6.jpg" alt="">
-        <img src="gallery-7.jpg" alt="">
-        <img src="gallery-8.jpg" alt="">
-        <img src="gallery-9.jpg" alt="">
-        <img src="gallery-10.jpg" alt="">
-        <img src="gallery-11.jpg" alt="">
-        <img src="gallery-12.jpg" alt="">
-        <img src="gallery-13.jpg" alt="">
-        <img src="gallery-14.jpg" alt="">
-        <img src="gallery-16.jpg" alt="">
-        
-      </div>
-    </section>
-
-    
-
-    <section id="past-productions">
-      <div class="section-title">
-        <h3>Past Productions</h3>
-        <p>
-A selection of theatre productions, festivals, concerts and cultural events produced by Ad Personam Cultural Events Ltd.
-</p></div>
-
-      <div class="work">
-
-        <div class="work-item"><div class="work-top"><div><h4>Castle-Lake Arts Festival <span class="meta">(2021)</span></h4><div class="meta">Festival production</div></div></div></div>
-        <div class="work-item"><div class="work-top"><div><h4>A Midsummer Night’s Dream <span class="meta">(2021)</span></h4><div class="meta">Theatre production</div></div></div></div>
-        <div class="work-item"><div class="work-top"><div><h4>Murrintown Christmas Festival <span class="meta">(2021–2022)</span></h4><div class="meta">Seasonal festival</div></div></div></div>
-        <div class="work-item"><div class="work-top"><div><h4>By Billy Roche <span class="meta">(2022)</span></h4><div class="meta">Theatre production</div></div></div></div>
-        <div class="work-item"><div class="work-top"><div><h4>BarnFest at St Mary’s GAA <span class="meta">(2022)</span></h4><div class="meta">Community festival event</div></div></div></div>
-        <div class="work-item"><div class="work-top"><div><h4>Christmas by Candlelight <span class="meta">(Ongoing)</span></h4><div class="meta">Seasonal performance series</div></div></div></div>
-        <div class="work-item"><div class="work-top"><div><h4>Sequah <span class="meta">(2023)</span></h4><div class="meta">Short film by Billy Roche</div></div></div></div>
-        <div class="work-item"><div class="work-top"><div><h4>Bealtaine Festival, Wexford <span class="meta">(2023–2024)</span></h4><div class="meta">Festival programming</div></div></div></div>
-        <div class="work-item"><div class="work-top"><div><h4>Murrintown Christmas Special <span class="meta">(2023)</span></h4><div class="meta">Seasonal special event</div></div></div></div>
-        <div class="work-item"><div class="work-top"><div><h4>The Rosslare Song Project <span class="meta">(2023)</span></h4><div class="meta">Cruinniú an nÓg Wexford</div></div></div></div>
-        <div class="work-item"><div class="work-top"><div><h4>Everyone <span class="meta">(2024)</span></h4><div class="meta">Music Generation Wexford Park event</div></div></div></div>
-        <div class="work-item"><div class="work-top"><div><h4>Filling the Well <span class="meta">(2024)</span></h4><div class="meta">Rosslare Strand Culture Night</div></div></div></div>
-        <div class="work-item"><div class="work-top"><div><h4>La/Oíche <span class="meta">(2024)</span></h4><div class="meta">Ceilúradh, Fleadh Cheoil na hÉireann (Music Generation)</div></div></div></div>
-        <div class="work-item"><div class="work-top"><div><h4>Music Generation Educators Day – We Are Music Generation <span class="meta">(2025)</span></h4><div class="meta">Music Generation national event</div></div></div></div>
-        <div class="work-item"><div class="work-top"><div><h4>Bí Ann <span class="meta">(2025)</span></h4><div class="meta">Music Generation, Fleadh Cheoil na hÉireann</div></div></div></div>
-        <div class="work-item"><div class="work-top"><div><h4>Filling the Well <span class="meta">(2025)</span></h4><div class="meta">Rosslare Strand Culture Night</div></div></div></div>
-        <div class="work-item"><div class="work-top"><div><h4>Murrintown Christmas Special <span class="meta">(2025)</span></h4><div class="meta">Seasonal special event</div></div></div></div>
-
-      </div>
-    </section>
-
-    <section id="services">
-      <div class="section-title">
-        <h3>What we do</h3>
-        <p>Ways we can work with venues, local authorities, festivals, schools and partners.</p>
-      </div>
-
-      <div class="grid three">
-        <div class="tile">
-          <h4>Theatre production</h4>
-          <p>Actor-led productions, readings and touring partnerships — from rehearsal to opening night.</p>
-          <ul class="list">
-            <li><span class="dot"></span><span>Direction & producing</span></li>
-            <li><span class="dot"></span><span>Design & technical coordination</span></li>
-            <li><span class="dot"></span><span>Tour-ready planning</span></li>
-          </ul>
         </div>
-        <div class="tile">
-          <h4>Public events & festivals</h4>
-          <p>Seasonal and site-based experiences built around place, audience flow and atmosphere.</p>
-          <ul class="list">
-            <li><span class="dot"></span><span>Programming & delivery</span></li>
-            <li><span class="dot"></span><span>Operations & staffing</span></li>
-            <li><span class="dot"></span><span>Partnership management</span></li>
-          </ul>
-        </div>
-        <div class="tile">
-          <h4>Youth & community projects</h4>
-          <p>Workshops, participatory performance, and music projects designed around real engagement.</p>
-          <ul class="list">
-            <li><span class="dot"></span><span>Schools & youth programmes</span></li>
-            <li><span class="dot"></span><span>Creative facilitation</span></li>
-            <li><span class="dot"></span><span>Showcase events</span></li>
-          </ul>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="contact">
-      <div class="section-title">
-        <h3>Contact</h3>
-        <p>For bookings, partnerships, co-productions or a company pack, send us a message.</p>
-      </div>
-
-      <div class="contact">
-        <div class="tile">
-          <h4>Send a message</h4>
-          <p class="meta">This form uses your email app. If you prefer, email directly using the address on the right.</p>
-
-          <form onsubmit="return mailtoSubmit(event)">
-            <div class="field">
-              <label for="name">Name</label>
-              <input id="name" name="name" required placeholder="Your name" />
-            </div>
-            <div class="field">
-              <label for="email">Email</label>
-              <input id="email" name="email" type="email" required placeholder="you@example.com" />
-            </div>
-            <div class="field">
-              <label for="msg">Message</label>
-              <textarea id="msg" name="msg" required placeholder="Tell us what you’re working on…"></textarea>
-            </div>
-            <div class="cta" style="margin-top:12px">
-              <button class="btn primary" type="submit">Email Ad Personam</button>
-              <a class="btn" href="#work">View recent work</a>
-            </div>
-          </form>
+      <section id="about">
+        <div class="section-title">
+          <h3>About</h3>
+          <p>Who we are, what we make, and the values behind the work.</p>
         </div>
 
-        <div class="tile">
-          <h4>Direct contact</h4>
+        <div class="grid two">
+
+          <div class="tile">
+            <h4>Our approach</h4>
+
+            <p>
+              We produce work that brings professional artistic standards into public life —
+              from intimate theatre productions to large-scale seasonal events. Our focus is
+              on clarity, craft and collaboration: strong writing, strong performers and
+              projects that feel meaningful to the communities they are made with.
+            </p>
+
+            <ul class="list">
+              <li>
+                <span class="dot"></span>
+                <span>Artist-led, story-first production.</span>
+              </li>
+              <li>
+                <span class="dot"></span>
+                <span>Accessible experiences without lowering ambition.</span>
+              </li>
+              <li>
+                <span class="dot"></span>
+                <span>Partnerships with venues, festivals, schools and local organisations.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="tile">
+            <h4>Leadership</h4>
+
+            <p>
+              The company is co-founded by theatre director, producer, actor and educator
+              <strong>Peter McCamley</strong> and producer, actor, singing teacher and musician
+              <strong>Aileen Donohoe</strong>. Their practice spans directing, producing,
+              performance training and community-based arts programming.
+            </p>
+
+            <p class="meta">
+              For biographies, production information or funding materials, request our
+              company pack.
+            </p>
+
+            <div class="cta" style="margin-top:12px;">
+              <a class="btn" href="#contact">Request a company pack</a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section id="projects">
+        <div class="section-title">
+          <h3>Current Projects</h3>
+          <p>What we are making now — and where you can see it.</p>
+        </div>
+
+        <div class="projects single">
+
+          <article class="project">
+
+            <div class="project-media">
+              <img
+                src="thank-you-for-the-musicals.jpg"
+                alt="Thank You For The Musicals at Kellys Hotel, Rosslare"
+              />
+
+              <div class="booking-badge">NOW BOOKING</div>
+            </div>
+
+            <div class="project-body">
+
+              <h4 class="project-title">Thank You For The Musicals</h4>
+
+              <p class="project-sub">
+                A joyful live celebration of unforgettable songs from Broadway and the West End,
+                performed in the Ivy Room at Kellys Resort Hotel, Rosslare, throughout Summer 2027.
+              </p>
+
+              <div class="project-links">
+                <a
+                  class="gold"
+                  href="https://www.kellys.ie/dining/nightly-entertainment-music/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Book Here
+                </a>
+
+                <a href="#past-productions">View Past Productions</a>
+              </div>
+
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <section id="past-productions">
+        <div class="section-title">
+          <h3>Past Productions</h3>
           <p>
-            <strong>Ad Personam Cultural Events Ltd</strong><br />
-            Wexford, Ireland
+            A selection of theatre, film, music and community projects produced by Ad Personam.
           </p>
-          <ul class="list">
-            <li><span class="dot"></span><span><strong>Email:</strong> <span class="meta">menapiatheatre@gmail.com</span></span></li>
-            <li><span class="dot"></span><span><strong>Phone:</strong> <span class="meta">085 280 1566 / 085 156 1879</span></span></li>
-            <li><span class="dot"></span><span><strong>Social:</strong> <span class="meta"><a href="https://www.facebook.com/adpersonamwex" target="_blank" rel="noopener">Facebook</a></span></span></li>
-          </ul>
-</div>
+        </div>
+
+        <div class="projects">
+
+          <article class="project">
+            <div class="project-media contain">
+              <img
+                src="project-1.jpg"
+                alt="Of Mornington production image"
+              />
+            </div>
+
+            <div class="project-body">
+              <h4 class="project-title">
+                Of Mornington <span class="meta">(2026)</span>
+              </h4>
+
+              <p class="project-sub">
+                Billy Roche's raw, quietly devastating drama, produced at Wexford Arts Centre
+                and Smock Alley Theatre, Dublin.
+              </p>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-media contain">
+              <img
+                src="gallery-11.jpg"
+                alt="Filling the Well community arts event"
+              />
+            </div>
+
+            <div class="project-body">
+              <h4 class="project-title">
+                Filling the Well <span class="meta">(2024–2025)</span>
+              </h4>
+
+              <p class="project-sub">
+                A community-led Culture Night event in Rosslare Strand, bringing together
+                music, performance and local stories.
+              </p>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-media contain">
+              <img
+                src="gallery-5.jpg"
+                alt="Sequah short film production image"
+              />
+            </div>
+
+            <div class="project-body">
+              <h4 class="project-title">
+                Sequah <span class="meta">(2023)</span>
+              </h4>
+
+              <p class="project-sub">
+                A short film by Billy Roche, created through a collaboration of
+                Wexford-based artists and performers.
+              </p>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-media contain">
+              <img
+                src="gallery-3.jpg"
+                alt="Christmas by Candlelight performance"
+              />
+            </div>
+
+            <div class="project-body">
+              <h4 class="project-title">
+                Christmas by Candlelight <span class="meta">(Ongoing)</span>
+              </h4>
+
+              <p class="project-sub">
+                An atmospheric seasonal performance series featuring live music,
+                theatre and storytelling.
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <section id="gallery">
+        <div class="section-title">
+          <h3>Images</h3>
+          <p>A glimpse of recent productions, events and collaborations.</p>
+        </div>
+
+        <div class="gallery">
+          <img src="gallery-1.jpg" alt="Ad Personam production and event image 1" />
+          <img src="gallery-2.jpg" alt="Ad Personam production and event image 2" />
+          <img src="gallery-3.jpg" alt="Ad Personam production and event image 3" />
+          <img src="gallery-4.jpg" alt="Ad Personam production and event image 4" />
+          <img src="gallery-5.jpg" alt="Ad Personam production and event image 5" />
+          <img src="gallery-6.jpg" alt="Ad Personam production and event image 6" />
+          <img src="gallery-7.jpg" alt="Ad Personam production and event image 7" />
+          <img src="gallery-8.jpg" alt="Ad Personam production and event image 8" />
+          <img src="gallery-9.jpg" alt="Ad Personam production and event image 9" />
+          <img src="gallery-10.jpg" alt="Ad Personam production and event image 10" />
+          <img src="gallery-11.jpg" alt="Ad Personam production and event image 11" />
+          <img src="gallery-12.jpg" alt="Ad Personam production and event image 12" />
+          <img src="gallery-13.jpg" alt="Ad Personam production and event image 13" />
+          <img src="gallery-14.jpg" alt="Ad Personam production and event image 14" />
+          <img src="gallery-16.jpg" alt="Ad Personam production and event image 15" />
+        </div>
+      </section>
+
+      <section id="project-list">
+        <div class="section-title">
+          <h3>Full Project List</h3>
+          <p>
+            Theatre, film, festivals, music and cultural projects delivered by
+            Ad Personam Cultural Events Ltd.
+          </p>
+        </div>
+
+        <div class="work">
+
+          <div class="work-item">
+            <div class="work-top">
+              <div>
+                <h4>Castle-Lake Arts Festival <span class="meta">(2021)</span></h4>
+                <div class="meta">Festival production</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="work-item">
+            <div class="work-top">
+              <div>
+                <h4>A Midsummer Night's Dream <span class="meta">(2021)</span></h4>
+                <div class="meta">Theatre production</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="work-item">
+            <div class="work-top">
+              <div>
+                <h4>Murrintown Christmas Festival <span class="meta">(2021–2022)</span></h4>
+                <div class="meta">Seasonal festival</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="work-item">
+            <div class="work-top">
+              <div>
+                <h4>By Billy Roche <span class="meta">(2022)</span></h4>
+                <div class="meta">Theatre production</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="work-item">
+            <div class="work-top">
+              <div>
+                <h4>BarnFest at St Mary's GAA <span class="meta">(2022)</span></h4>
+                <div class="meta">Community festival event</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="work-item">
+            <div class="work-top">
+              <div>
+                <h4>Christmas by Candlelight <span class="meta">(Ongoing)</span></h4>
+                <div class="meta">Seasonal performance series</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="work-item">
+            <div class="work-top">
+              <div>
+                <h4>Sequah <span class="meta">(2023)</span></h4>
+                <div class="meta">Short film by Billy Roche</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="work-item">
+            <div class="work-top">
+              <div>
+                <h4>Bealtaine Festival, Wexford <span class="meta">(2023–2024)</span></h4>
+                <div class="meta">Festival programming</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="work-item">
+            <div class="work-top">
+              <div>
+                <h4>Murrintown Christmas Special <span class="meta">(2023)</span></h4>
+                <div class="meta">Seasonal special event</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="work-item">
+            <div class="work-top">
+              <div>
+                <h4>The Rosslare Song Project <span class="meta">(2023)</span></h4>
+                <div class="meta">Cruinniú an nÓg Wexford</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="work-item">
+            <div class="work-top">
+              <div>
+                <h4>Everyone <span class="meta">(2024)</span></h4>
+                <div class="meta">Music Generation Wexford Park event</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="work-item">
+            <div class="work-top">
+              <div>
+                <h4>Filling the Well <span class="meta">(2024)</span></h4>
+                <div class="meta">Rosslare Strand Culture Night</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="work-item">
+            <div class="work-top">
+              <div>
+                <h4>La/Oíche <span class="meta">(2024)</span></h4>
+                <div class="meta">Ceilúradh, Fleadh Cheoil na hÉireann — Music Generation</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="work-item">
+            <div class="work-top">
+              <div>
+                <h4>Music Generation Educators Day – We Are Music Generation <span class="meta">(2025)</span></h4>
+                <div class="meta">Music Generation national event</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="work-item">
+            <div class="work-top">
+              <div>
+                <h4>Bí Ann <span class="meta">(2025)</span></h4>
+                <div class="meta">Music Generation, Fleadh Cheoil na hÉireann</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="work-item">
+            <div class="work-top">
+              <div>
+                <h4>Filling the Well <span class="meta">(2025)</span></h4>
+                <div class="meta">Rosslare Strand Culture Night</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="work-item">
+            <div class="work-top">
+              <div>
+                <h4>Murrintown Christmas Special <span class="meta">(2025)</span></h4>
+                <div class="meta">Seasonal special event</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="work-item">
+            <div class="work-top">
+              <div>
+                <h4>Of Mornington <span class="meta">(2026)</span></h4>
+                <div class="meta">
+                  Theatre production at Wexford Arts Centre and Smock Alley Theatre
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="work-item">
+            <div class="work-top">
+              <div>
+                <h4>
+                  Music Generation Musician Educators Gathering Day
+                  <span class="meta">(2026)</span>
+                </h4>
+                <div class="meta">National professional development event</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section id="services">
+        <div class="section-title">
+          <h3>What We Do</h3>
+          <p>
+            Ways we can work with venues, local authorities, festivals, schools and partners.
+          </p>
+        </div>
+
+        <div class="grid three">
+
+          <div class="tile">
+            <h4>Theatre production</h4>
+
+            <p>
+              Actor-led productions, readings and touring partnerships — from rehearsal
+              to opening night.
+            </p>
+
+            <ul class="list">
+              <li><span class="dot"></span><span>Direction and producing</span></li>
+              <li><span class="dot"></span><span>Design and technical coordination</span></li>
+              <li><span class="dot"></span><span>Tour-ready planning</span></li>
+            </ul>
+          </div>
+
+          <div class="tile">
+            <h4>Public events and festivals</h4>
+
+            <p>
+              Seasonal and site-based experiences built around place, audience flow
+              and atmosphere.
+            </p>
+
+            <ul class="list">
+              <li><span class="dot"></span><span>Programming and delivery</span></li>
+              <li><span class="dot"></span><span>Operations and staffing</span></li>
+              <li><span class="dot"></span><span>Partnership management</span></li>
+            </ul>
+          </div>
+
+          <div class="tile">
+            <h4>Youth and community projects</h4>
+
+            <p>
+              Workshops, participatory performance and music projects designed around
+              meaningful engagement.
+            </p>
+
+            <ul class="list">
+              <li><span class="dot"></span><span>Schools and youth programmes</span></li>
+              <li><span class="dot"></span><span>Creative facilitation</span></li>
+              <li><span class="dot"></span><span>Showcase events</span></li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="section-title">
+          <h3>Contact</h3>
+          <p>
+            For bookings, partnerships, co-productions or a company pack, send us a message.
+          </p>
+        </div>
+
+        <div class="contact">
+
+          <div class="tile">
+            <h4>Send a message</h4>
+
+            <p class="meta">
+              This form opens your email app. You can also email us directly using the
+              address shown alongside the form.
+            </p>
+
+            <form onsubmit="return mailtoSubmit(event)">
+
+              <div class="field">
+                <label for="name">Name</label>
+                <input
+                  id="name"
+                  name="name"
+                  required
+                  placeholder="Your name"
+                />
+              </div>
+
+              <div class="field">
+                <label for="email">Email</label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  required
+                  placeholder="you@example.com"
+                />
+              </div>
+
+              <div class="field">
+                <label for="msg">Message</label>
+                <textarea
+                  id="msg"
+                  name="msg"
+                  required
+                  placeholder="Tell us what you are working on..."
+                ></textarea>
+              </div>
+
+              <div class="cta" style="margin-top:12px;">
+                <button class="btn primary" type="submit">Email Ad Personam</button>
+                <a class="btn" href="#past-productions">View past productions</a>
+              </div>
+
+            </form>
+          </div>
+
+          <div class="tile">
+            <h4>Direct contact</h4>
+
+            <p>
+              <strong>Ad Personam Cultural Events Ltd</strong><br />
+              Wexford, Ireland
+            </p>
+
+            <ul class="list">
+              <li>
+                <span class="dot"></span>
+                <span>
+                  <strong>Email:</strong>
+                  <span class="meta">
+                    <a href="mailto:menapiatheatre@gmail.com">
+                      menapiatheatre@gmail.com
+                    </a>
+                  </span>
+                </span>
+              </li>
+
+              <li>
+                <span class="dot"></span>
+                <span>
+                  <strong>Phone:</strong>
+                  <span class="meta">
+                    085 280 1566 / 085 156 1879
+                  </span>
+                </span>
+              </li>
+
+              <li>
+                <span class="dot"></span>
+                <span>
+                  <strong>Social:</strong>
+                  <span class="meta">
+                    <a
+                      href="https://www.facebook.com/adpersonamwex"
+                      target="_blank"
+                      rel="noopener"
+                    >
+                      Facebook
+                    </a>
+                  </span>
+                </span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <div>
+        © <span id="year"></span> Ad Personam Cultural Events Ltd. All rights reserved.
       </div>
-    </section>
 
-  </div>
-</main>
+      <div class="meta">
+        Wexford-based theatre, music and cultural production company
+      </div>
+    </div>
+  </footer>
 
-<footer>
-  <div class="wrap" style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center;">
-    <div>© <span id="year"></span> Ad Personam Cultural Events Ltd. All rights reserved.</div>
-    <div class="meta">Simple one-page site • Built for quick updates</div>
-  </div>
-</footer>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
 
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
+    function mailtoSubmit(event){
+      event.preventDefault();
 
-  function mailtoSubmit(e){
-    e.preventDefault();
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const msg = document.getElementById('msg').value.trim();
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const message = document.getElementById("msg").value.trim();
 
-    const to = 'menapiatheatre@gmail.com';
-    const subject = encodeURIComponent('Ad Personam enquiry from ' + name);
-    const body = encodeURIComponent(
-      'Name: ' + name + '
-' +
-      'Email: ' + email + '
+      const to = "menapiatheatre@gmail.com";
+      const subject = encodeURIComponent("Ad Personam enquiry from " + name);
 
-' +
-      msg + '
-'
-    );
+      const body = encodeURIComponent(
+        "Name: " + name + "\n" +
+        "Email: " + email + "\n\n" +
+        message + "\n"
+      );
 
-    window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
-    return false;
-  }
-</script>
+      window.location.href =
+        "mailto:" + to + "?subject=" + subject + "&body=" + body;
+
+      return false;
+    }
+  </script>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
