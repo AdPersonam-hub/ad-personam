@@ -136,9 +136,7 @@
 
     footer{padding:28px 0 40px;color:var(--muted);font-size:12px;border-top:1px solid var(--line)}
 
-    /* Responsive */.gallery img{height:160px}
-    }
-  
+
     /* Lightbox (no JS) */
     .lightbox{position:fixed;inset:0;background:rgba(0,0,0,.85);display:none;align-items:center;justify-content:center;z-index:100}
     .lightbox img{max-width:92vw;max-height:92vh;border-radius:12px;background:#fff}
@@ -148,8 +146,17 @@
 
     /* Responsive (add-on) */
     @media (max-width: 860px){
+      .hero-grid,.grid.two,.grid.three,.contact{grid-template-columns:1fr}
       .projects{grid-template-columns:1fr}
-      .project-media img{height:200px}
+      .gallery{grid-template-columns:repeat(2,1fr)}
+      .hero h2{font-size:32px}
+      nav ul{gap:6px}
+    }
+
+    @media (max-width: 560px){
+      .gallery{grid-template-columns:1fr}
+      .nav{align-items:flex-start}
+      nav ul{justify-content:flex-start}
     }
 
 </style>
@@ -169,8 +176,8 @@
       </a>
       <nav aria-label="Primary">
         <ul>
-          <li><a href="#projects">Projects</a></li>
-          
+          <li><a href="#projects">Current projects</a></li>
+          <li><a href="#past-productions">Past productions</a></li>
           <li><a href="#work">Work</a></li>
           <li><a href="#services">What we do</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -278,42 +285,78 @@
     </section>
 
     <section id="projects">
-  <div class="section-title">
-    <h3>Current projects</h3>
-    <p>What we’re making right now — and where you can see it.</p>
-  </div>
-
-  <div class="projects">
-
-    <article class="project">
-      <div class="project-media">
-        <!-- Replace with your real project image -->
-        <img src="project-1.jpg" alt="Of Mornington production image">
+      <div class="section-title">
+        <h3>Current projects</h3>
+        <p>What we’re making now — and where you can see it.</p>
       </div>
 
-      <div class="project-body">
-        <h4 class="project-title">Of Mornington</h4>
+      <div class="projects">
+        <article class="project">
+          <div class="project-media">
+            <img src="thank-you-for-the-musicals.svg" alt="Musical theatre stage with a vintage microphone and theatre curtains">
+          </div>
 
-        <p class="project-sub">
-          Billy Roche’s raw, quietly devastating drama — three ordinary people clinging to legends when the applause is gone.
-        </p>
-
-        <div class="project-links">
-          <a class="primary"
-             href="https://wexfordartscentre.ticketsolve.com/ticketbooth/shows/873661271"
-             target="_blank"
-             rel="noopener">
-             Book tickets
-          </a>
-        </div>
+          <div class="project-body">
+            <h4 class="project-title">Thank You For The Musicals</h4>
+            <p class="project-sub">
+              A joyful live celebration of great songs from the world of musical theatre.
+              <strong>Kellys Hotel, Rosslare — Summer 2027.</strong>
+            </p>
+          </div>
+        </article>
       </div>
-    </article>
+    </section>
 
-  </div>
-</section>
+    <section id="past-productions">
+      <div class="section-title">
+        <h3>Past productions</h3>
+        <p>A selection of theatre, film, music and community projects produced by Ad Personam.</p>
+      </div>
 
+      <div class="projects">
+        <article class="project">
+          <div class="project-media">
+            <img src="project-1.jpg" alt="Of Mornington production image">
+          </div>
+          <div class="project-body">
+            <h4 class="project-title">Of Mornington</h4>
+            <p class="project-sub">Billy Roche’s raw, quietly devastating drama, produced at Wexford Arts Centre and Smock Alley Theatre, Dublin.</p>
+          </div>
+        </article>
 
-    <section id="gallery">
+        <article class="project">
+          <div class="project-media">
+            <img src="gallery-8.jpg" alt="Filling the Well community arts event">
+          </div>
+          <div class="project-body">
+            <h4 class="project-title">Filling the Well</h4>
+            <p class="project-sub">A community-led Culture Night event in Rosslare Strand, bringing together music, performance and local stories.</p>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-media">
+            <img src="gallery-5.jpg" alt="Sequah short film production image">
+          </div>
+          <div class="project-body">
+            <h4 class="project-title">Sequah</h4>
+            <p class="project-sub">A short film by Billy Roche, created through a collaboration of Wexford-based artists and performers.</p>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-media">
+            <img src="gallery-10.jpg" alt="Christmas by Candlelight performance">
+          </div>
+          <div class="project-body">
+            <h4 class="project-title">Christmas by Candlelight</h4>
+            <p class="project-sub">An atmospheric seasonal performance series featuring live music, theatre and storytelling.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+<section id="gallery">
       <div class="section-title">
         <h3>Images</h3>
         <p>A glimpse of recent productions, events and collaborations.</p>
@@ -491,7 +534,6 @@
 
 </body>
 </html>
-
 
 
 
