@@ -533,8 +533,10 @@
 
 .people-grid{
   display:grid;
-  grid-template-columns:repeat(2,1fr);
+  grid-template-columns:repeat(2,minmax(0,1fr));
   gap:18px;
+  align-items:start;
+
 }
 
 .person-card{
@@ -542,11 +544,18 @@
   grid-template-columns:180px 1fr;
   gap:18px;
   align-items:start;
+
   padding:18px;
+
   background:var(--card);
   border:1px solid var(--line);
   border-radius:18px;
+
   box-shadow:0 1px 0 rgba(0,0,0,.02);
+
+  height:auto;
+  align-self:start;
+}
 }
 
 .person-image img{
