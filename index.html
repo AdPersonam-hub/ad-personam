@@ -835,7 +835,91 @@
   .logo-wall,
   .artist-name-grid{grid-template-columns:1fr;}
 }
+/* OUR CREATIVE COMMUNITY */
 
+.creative-community-panel{
+  padding:24px;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:18px;
+}
+
+.creative-community-group + .creative-community-group{
+  margin-top:30px;
+  padding-top:26px;
+  border-top:1px solid var(--line);
+}
+
+.creative-community-group h4{
+  margin:0 0 18px;
+  font-size:15px;
+  font-weight:850;
+}
+
+.artist-name-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:11px 22px;
+}
+
+.artist-name-grid span{
+  color:var(--muted2);
+  font-size:13px;
+  line-height:1.45;
+}
+
+.creative-partner-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:14px;
+}
+
+.creative-partner-card{
+  min-height:92px;
+  padding:16px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:5px;
+  text-align:center;
+  background:#f6f5f2;
+  border:1px solid var(--line);
+  border-radius:14px;
+}
+
+.creative-partner-card strong{
+  color:var(--text);
+  font-size:14px;
+}
+
+.creative-partner-card span{
+  color:var(--muted);
+  font-size:12px;
+}
+
+@media (max-width:900px){
+  .artist-name-grid{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+  }
+
+  .creative-partner-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+}
+
+@media (max-width:680px){
+  .artist-name-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+}
+
+@media (max-width:420px){
+  .artist-name-grid,
+  .creative-partner-grid{
+    grid-template-columns:1fr;
+  }
+}
     /* Contact */
 
     .contact{
@@ -1823,26 +1907,96 @@
   </div>
 </section>
 
-<section id="artists-collaborators">
+<section id="creative-community">
   <div class="section-title">
-    <h3>Artists &amp; Creative Collaborators</h3>
-    <p>The people whose artistry, skill and generosity bring our work to life.</p>
+    <h3>Our Creative Community</h3>
+    <p>
+      Every Ad Personam production is built on collaboration. We are proud to
+      have worked alongside an extraordinary community of actors, musicians,
+      writers, directors, designers, technicians, educators and creative partners.
+      Their talent, generosity and passion continue to shape everything we do.
+    </p>
   </div>
 
-  <div class="artists-panel">
-    <p>
-      We are proud to have worked with an extraordinary community of actors,
-      musicians, writers, designers, directors, technicians, educators and
-      creative practitioners. Every project is shaped by the talent, imagination
-      and collaboration of the artists we work alongside.
-    </p>
+  <div class="creative-community-panel">
 
-    <!-- Add your alphabetical names later:
-    <div class="artist-name-grid">
-      <span>Artist Name</span>
-      <span>Artist Name</span>
+    <div class="creative-community-group">
+      <h4>Artists &amp; Creative Collaborators</h4>
+
+      <div class="artist-name-grid">
+        <span>Alan Corceran</span>
+        <span>Billy Roche</span>
+        <span>Camille O'Sullivan</span>
+        <span>Carol Stacy</span>
+        <span>David Wray</span>
+        <span>Duncan Bricenden</span>
+        <span>Eithne Corrigan</span>
+        <span>Elizabeth Rose-Brown</span>
+        <span>Frances White</span>
+        <span>Gary Lydon</span>
+        <span>Greg O'Leary</span>
+        <span>Jack Hopkins</span>
+        <span>James McDermott</span>
+        <span>James O'Brien</span>
+        <span>Jay O'Sullivan</span>
+        <span>Jill Cox</span>
+        <span>Katherine Atkinson</span>
+        <span>Louise Malone</span>
+        <span>Megan Pottinger</span>
+        <span>Michael Benson</span>
+        <span>Mick Darcy</span>
+        <span>Mick Egan</span>
+        <span>Michelle Mason</span>
+        <span>Mike Denver</span>
+        <span>Myles Feerick</span>
+        <span>Niall O'Dowd</span>
+        <span>Nicola O'Hair</span>
+        <span>Nigel West</span>
+        <span>Olga Conway</span>
+        <span>Patrick Browne</span>
+        <span>Patrick Lawlor</span>
+        <span>Paul Mullen</span>
+        <span>Róisín Hynes</span>
+        <span>Ross Scanlon</span>
+        <span>Sarah Doyle</span>
+        <span>Sean O'Leary</span>
+        <span>Sharon Clancy</span>
+        <span>Simon Quigley</span>
+        <span>Siobhán Lynch</span>
+        <span>Síofra O'Meara</span>
+        <span>Stephen Hyden</span>
+        <span>Terry Byrne</span>
+        <span>Tom Bates</span>
+        <span>Tony Carty</span>
+        <span>Trish Gallagher</span>
+      </div>
     </div>
-    -->
+
+    <div class="creative-community-group creative-partners-group">
+      <h4>Creative Partners</h4>
+
+      <div class="creative-partner-grid">
+        <div class="creative-partner-card">
+          <strong>Corner Boy</strong>
+          <span>Wexford band</span>
+        </div>
+
+        <div class="creative-partner-card">
+          <strong>Stage It</strong>
+          <span>Mark &amp; Cian Redmond</span>
+        </div>
+
+        <div class="creative-partner-card">
+          <strong>IMRO</strong>
+        </div>
+
+        <div class="creative-partner-card">
+          <strong>ODI</strong>
+          <span>Dave Redfern</span>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
       <section id="contact">
