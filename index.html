@@ -711,6 +711,130 @@
       font-size:14px;
       font-weight:850;
     }
+/* PARTNERS, COLLABORATORS & SUPPORTERS */
+
+.partner-group{
+  margin-top:22px;
+}
+
+.partner-group h4,
+.supporter-note h4{
+  margin:0 0 12px;
+  font-size:14px;
+  font-weight:850;
+}
+
+.logo-wall{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:14px;
+}
+
+.logo-tile{
+  min-height:150px;
+  padding:18px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:16px;
+  box-shadow:0 1px 0 rgba(0,0,0,.02);
+  text-align:center;
+  transition:transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+}
+
+.logo-tile:hover,
+.logo-tile:focus-visible{
+  transform:translateY(-3px);
+  border-color:#c9c4b8;
+  box-shadow:0 14px 30px rgba(0,0,0,.09);
+}
+
+.logo-tile img{
+  width:100%;
+  max-width:170px;
+  height:70px;
+  object-fit:contain;
+  filter:grayscale(100%);
+  opacity:.78;
+  transition:filter .22s ease, opacity .22s ease, transform .22s ease;
+}
+
+.logo-tile:hover img,
+.logo-tile:focus-visible img{
+  filter:grayscale(0%);
+  opacity:1;
+  transform:scale(1.03);
+}
+
+.logo-tile span{
+  color:var(--muted2);
+  font-size:12px;
+  font-weight:700;
+  line-height:1.35;
+}
+
+.supporter-note{
+  margin-top:22px;
+  padding:18px;
+  background:#f6f5f2;
+  border:1px solid var(--line);
+  border-radius:16px;
+}
+
+.supporter-note p{
+  margin:0;
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.6;
+}
+
+.artists-panel{
+  padding:20px;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:18px;
+}
+
+.artists-panel > p{
+  max-width:78ch;
+  margin:0;
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.65;
+}
+
+.artist-name-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:10px 18px;
+  margin-top:20px;
+  padding-top:18px;
+  border-top:1px solid var(--line);
+}
+
+.artist-name-grid span{
+  color:var(--muted2);
+  font-size:13px;
+}
+
+@media (max-width:900px){
+  .logo-wall{grid-template-columns:repeat(3,minmax(0,1fr));}
+  .artist-name-grid{grid-template-columns:repeat(3,minmax(0,1fr));}
+}
+
+@media (max-width:680px){
+  .logo-wall{grid-template-columns:repeat(2,minmax(0,1fr));}
+  .artist-name-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+}
+
+@media (max-width:420px){
+  .logo-wall,
+  .artist-name-grid{grid-template-columns:1fr;}
+}
 
     /* Contact */
 
@@ -1569,7 +1693,147 @@
 
         </div>
       </section>
+<section id="partners">
+  <div class="section-title">
+    <h3>Partners, Collaborators &amp; Supporters</h3>
+    <p>
+      We are grateful to the organisations, venues, public bodies, businesses
+      and community partners who have supported, hosted and collaborated on our work.
+    </p>
+  </div>
 
+  <div class="partner-group">
+    <h4>Public, Funding &amp; Cultural Partners</h4>
+    <div class="logo-wall">
+
+      <a class="logo-tile" href="https://www.wexfordcoco.ie/" target="_blank" rel="noopener">
+        <img src="logos/wexford-county-council.png" alt="Wexford County Council logo">
+        <span>Wexford County Council</span>
+      </a>
+
+      <a class="logo-tile" href="https://www.wexfordcoco.ie/" target="_blank" rel="noopener">
+        <img src="logos/rosslare-municipal-district.png" alt="Rosslare Municipal District logo">
+        <span>Rosslare Municipal District</span>
+      </a>
+
+      <a class="logo-tile" href="https://www.creativeireland.gov.ie/" target="_blank" rel="noopener">
+        <img src="logos/creative-ireland.png" alt="Creative Ireland logo">
+        <span>Creative Ireland</span>
+      </a>
+
+      <a class="logo-tile" href="https://www.gov.ie/en/department-of-culture-communications-and-sport/" target="_blank" rel="noopener">
+        <img src="logos/department-culture.png" alt="Department of Culture logo">
+        <span>Department of Culture</span>
+      </a>
+
+      <a class="logo-tile" href="https://www.dublincity.ie/residential/arts-and-events" target="_blank" rel="noopener">
+        <img src="logos/dublin-city-arts-office.png" alt="Dublin City Arts Office logo">
+        <span>Dublin City Arts Office</span>
+      </a>
+
+      <a class="logo-tile" href="https://culturenight.ie/" target="_blank" rel="noopener">
+        <img src="logos/culture-night-wexford.png" alt="County Wexford Culture Night logo">
+        <span>County Wexford Culture Night</span>
+      </a>
+
+    </div>
+  </div>
+
+  <div class="partner-group">
+    <h4>Arts Organisations &amp; Venues</h4>
+    <div class="logo-wall">
+
+      <a class="logo-tile" href="https://www.wexfordartscentre.ie/" target="_blank" rel="noopener">
+        <img src="logos/wexford-arts-centre.png" alt="Wexford Arts Centre logo">
+        <span>Wexford Arts Centre</span>
+      </a>
+
+      <a class="logo-tile" href="https://www.nationaloperahouse.ie/" target="_blank" rel="noopener">
+        <img src="logos/national-opera-house.png" alt="National Opera House logo">
+        <span>National Opera House</span>
+      </a>
+
+      <a class="logo-tile" href="https://smockalley.com/" target="_blank" rel="noopener">
+        <img src="logos/smock-alley-theatre.png" alt="Dublin Municipal Theatre at Smock Alley logo">
+        <span>Dublin Municipal Theatre at Smock Alley</span>
+      </a>
+
+      <a class="logo-tile" href="https://www.milltheatre.ie/" target="_blank" rel="noopener">
+        <img src="logos/dlr-mill-theatre.png" alt="dlr Mill Theatre Dundrum logo">
+        <span>dlr Mill Theatre Dundrum</span>
+      </a>
+
+      <a class="logo-tile" href="https://www.musicgeneration.ie/" target="_blank" rel="noopener">
+        <img src="logos/music-generation-ireland.png" alt="Music Generation Ireland logo">
+        <span>Music Generation Ireland</span>
+      </a>
+
+      <a class="logo-tile" href="https://www.musicgeneration.ie/" target="_blank" rel="noopener">
+        <img src="logos/music-generation-wexford.png" alt="Music Generation Wexford logo">
+        <span>Music Generation Wexford</span>
+      </a>
+
+    </div>
+  </div>
+
+  <div class="partner-group">
+    <h4>Tourism, Community &amp; Production Partners</h4>
+    <div class="logo-wall">
+
+      <a class="logo-tile" href="https://www.visitwexford.ie/" target="_blank" rel="noopener">
+        <img src="logos/visit-wexford.png" alt="Visit Wexford logo">
+        <span>Visit Wexford</span>
+      </a>
+
+      <a class="logo-tile" href="https://www.kellys.ie/" target="_blank" rel="noopener">
+        <img src="logos/kellys-hotel.png" alt="Kelly's Resort Hotel Rosslare logo">
+        <span>Kelly's Resort Hotel Rosslare</span>
+      </a>
+
+      <div class="logo-tile">
+        <img src="logos/murrintown-community-centre.png" alt="Murrintown Community Centre Committee logo">
+        <span>Murrintown Community Centre Committee</span>
+      </div>
+
+      <div class="logo-tile">
+        <img src="logos/think-print.png" alt="Think Print logo">
+        <span>Think Print</span>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="supporter-note">
+    <h4>With Thanks</h4>
+    <p>
+      We also gratefully acknowledge the support and encouragement of
+      Councillor Lisa McDonald and Councillor Catherine Biddy Walsh.
+    </p>
+  </div>
+</section>
+
+<section id="artists-collaborators">
+  <div class="section-title">
+    <h3>Artists &amp; Creative Collaborators</h3>
+    <p>The people whose artistry, skill and generosity bring our work to life.</p>
+  </div>
+
+  <div class="artists-panel">
+    <p>
+      We are proud to have worked with an extraordinary community of actors,
+      musicians, writers, designers, directors, technicians, educators and
+      creative practitioners. Every project is shaped by the talent, imagination
+      and collaboration of the artists we work alongside.
+    </p>
+
+    <!-- Add your alphabetical names later:
+    <div class="artist-name-grid">
+      <span>Artist Name</span>
+      <span>Artist Name</span>
+    </div>
+    -->
+  </div>
+</section>
       <section id="contact">
         <div class="section-title">
           <h3>Contact</h3>
